@@ -1,0 +1,185 @@
+header {
+
+  div.innerCont {
+
+    nav.globalNav {      
+
+      &.topLevel {       
+
+        // start of first level .login
+
+        &.login {
+
+          div.tlWrap {
+
+            ul.topLevel {
+
+              > li {
+
+                a {
+
+                  span.text {
+
+                    svg.chevronRightBold {
+                      display: none;
+                    }
+
+                  }
+
+                  svg.divot, svg.divotOutline {
+                    display: none;
+                  }
+
+                }
+
+                &.login {
+
+                  div.loginWrapper {
+
+                    a.btnLogin {
+                      @include avBlack;
+
+                      /*
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        @include avMed;
+                        color: $teal;
+                        // background-color: $black;
+                      }
+
+                      */
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: none;
+                        }
+
+                        svg.chevronRightBold {
+                          display: inline-block;
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: block;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divotOutline {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: block;
+                        }
+
+                      }
+
+                      &:hover, &:focus {
+
+                        span.text {
+
+                          svg.padlockIcon {
+                            display: none;
+                          }
+
+                          svg.padlockIconHoverTeal {
+                            display: block;
+
+                            @media #{scrMinWidth($screen-md-min)} {
+                              display: none;  
+                            }
+
+                          }
+
+                          svg.chevronRightBold {
+                            display: none;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: inline-block;
+
+                            @media #{scrMinWidth($screen-md-min)} {
+                              display: none;  
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                      &:active {
+                        color: $white;
+
+                        @media #{scrMinWidth($screen-md-min)} {
+                          color: $teal;
+                        }
+
+                        span.text {
+
+                          svg.padlockIcon {
+                            display: block;
+
+                            @media #{scrMinWidth($screen-md-min)} {
+                              display: none;
+                            }
+
+                          }
+
+                          svg.padlockIconHoverTeal {
+                            display: none;
+
+                            @media #{scrMinWidth($screen-md-min)} {
+                              display: block;
+                            }
+
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+
+                            @media #{scrMinWidth($screen-md-min)} {
+                              display: none;
+                            }
+
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of first level .login
+
+      }
+
+    }
+
+  }
+
+}

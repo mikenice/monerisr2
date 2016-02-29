@@ -1,0 +1,627 @@
+/* Footer styles begin */
+
+@include sticky-footer($footerHeight, "#ch", "#ch-footer", "#ftr");
+
+#ch {
+
+  @media #{scrMinWidth($screen-sm-min)} {
+    margin-bottom: 0 - $footerHeightSm;
+  }
+
+  @media #{scrMinWidth($screen-md-min)} {
+    margin-bottom: 0 - $footerHeightMd;
+  }
+
+}
+
+#ch #ch-footer {
+
+  @media #{scrMinWidth($screen-sm-min)} {
+    height: $footerHeightSm;
+  }
+
+  @media #{scrMinWidth($screen-md-min)} {
+    height: $footerHeightMd;
+  }
+
+}
+
+#ftr {
+
+  @media #{scrMinWidth($screen-sm-min)} {
+    height: $footerHeightSm;
+  }
+
+  @media #{scrMinWidth($screen-md-min)} {
+    height: $footerHeightMd;
+  }
+
+}
+
+footer {
+  color: $white;
+  background-color: $footerBlue;
+
+  &.row {
+    overflow: visible;
+  }
+
+  div.innerCont {
+    max-width: $interfaceMaxWidth;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    $paddingTopMd: 14px;
+    $fzMd: 9.5px;
+
+    div.navPhoneNumbersWrap {
+      @include clearfix;
+
+      nav.footerNav {
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          // width: $screen-sm-min - ($grid-gutter-width * 2);
+          margin: 0 $grid-gutter-width;
+          display: block;
+          // float: left;
+          border-bottom: 1px solid $footerBorder;
+        }
+
+        ul {
+          @include clearfix;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            margin-bottom: 0;
+            padding: $paddingTopMd 0 28px;
+            // display: inline-block;
+          }
+
+          li {
+            border-bottom: 2px solid $footerBorder;
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              width: auto;
+              margin: 16px 30px 0 0;
+              display: inline-block;
+              border-bottom-width: 0;
+
+              @media #{scrMinWidth($screen-md-min)} {
+                margin-right: 22px;
+              }
+
+            }
+
+            /*
+
+            html.safari & {
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                margin-right: 13px;
+              }
+
+            }
+
+            */
+
+            /*
+
+            html[lang="fr"] & {
+
+              @media #{scrMinWidth($screen-md-min)} {
+                margin-left: 10px;
+              }
+
+            }
+
+            */
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+
+            $aPadLr: ($grid-gutter-width / 2) * 3;
+            $aPadLrSm: 25px;
+            $aPadLrSmFr: 25px;
+
+            a {
+              padding: 16px $aPadLr;
+              font-size: em(8px);
+              line-height: em(10px);
+              @include avMed;
+              text: {
+                align: left;
+                decoration: none;
+              }
+              display: block;
+              color: $white;
+              position: relative;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                padding: 0;
+                font-size: em($fzMd);
+                text-align: center;
+                display: inline-block;
+              }
+
+              @media #{scrMinWidth($screen-md-min)} {
+                font-size: em(8px);
+              }
+
+              /*
+
+              html[lang="fr"] & {
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  padding: 38px $aPadLrSmFr;
+                }
+
+                @media #{scrMinWidth($screen-md-min)} {
+                  padding: 0;
+                }
+
+              }
+
+
+
+              */
+
+              $arrowH: 12px;
+              $arrowHsm: 42px;
+              
+              svg {
+                width: 6px;
+                height: $arrowH;
+                margin-top: 0 - ($arrowH / 2);
+                position: absolute;
+                right: $aPadLr;
+                top: 50%;
+
+                .chevron {
+                  fill: $white;
+                }
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  display: none;
+                }
+
+                /*
+
+                html[lang="fr"] & {
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    right: $aPadLrSmFr;
+                  }
+
+                }
+
+                */
+
+              }
+
+              &:hover, &:focus {
+                text-decoration: underline;
+              }
+
+            }
+
+            /*
+
+            &:nth-child(odd) {
+
+              a {
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  border-right: 1px solid $footerBorder;
+                }
+
+              }
+              
+            }
+
+            */
+
+          }
+
+        }
+
+      }
+
+      div.phoneNumbersWrap {
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          // margin-left: 15px;
+          // float: right;
+          text-align: left;
+          position: absolute;
+          right: 48px;
+          top: 134px;
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          top: 103px;
+        }
+
+        /*
+
+        html.desktop.safari & {
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            margin-left: 13px;
+          }
+
+        }
+
+        */
+
+        /*
+
+        html[lang="fr"] & {
+
+          @media #{scrMinWidth($screen-md-min)} {
+            float: right;
+          }
+
+        }
+
+        */
+
+        h6 {
+          padding: 22px 0 6px;
+          font: {
+            size: em(10px);
+            // weight: bold;
+          }
+          line-height: em(10px);
+          @include avBlack;
+          text-align: center;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            margin-top: 0;
+            padding: 0 0 6px;
+            font-size: em(9px);
+            text-align: left;
+          }
+
+          @media #{scrMinWidth($screen-md-min)} {
+            font-size: em(8px);
+          }
+
+          /*
+
+          html[lang="fr"] & {
+          
+            @media #{scrMinWidth($screen-md-min)} {
+              padding-top: 21px;
+            }
+
+          }
+
+          */
+
+        }
+
+        ul.phoneNumbers {
+          display: inline-block;
+          margin: -12px auto 0;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            margin-top: -10px;
+          }
+
+          $liHeight: 20px;
+          $liHeightSm: 50px;
+          $liTopPad: 5px;
+          $liTopPadSm: 16px;
+
+          li {
+            margin-top: 16px;
+            padding: 0;
+            font-size: em(8px);
+            line-height: em(10px);
+            @include avMed;
+            text-align: center;
+            position: relative;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              height: auto;
+              margin-top: 6px;
+              padding: 0;
+              font-size: em($fzMd);
+              text-align: left;
+            }
+
+            strong {
+              // font-weight: bold;
+              @include avBlack;
+              font-weight: normal;
+              color: $teal;
+            }
+
+            h6 {
+              margin: 0 0 10px;
+              padding: 0;
+              font-size: em(12px);
+              @include avRom;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                margin: 0 10px 0 0;
+                display: inline-block;
+                font-size: em(9px);
+                text-align: left;
+              }
+
+              @media #{scrMinWidth($screen-md-min)} {
+                font-size: em(8px);
+              }
+
+            }
+
+            a.bigTealCta {
+              width: 280px - $grid-gutter-width;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                padding: 0;
+                display: inline;
+                text-align: left;
+                font-size: em(9px);
+                line-height: em(10px);
+                @include avRom;
+                letter-spacing: normal;
+                color: $teal;
+                border-radius: 0;
+                background-color: transparent;
+                cursor: text;
+
+                @media #{scrMinWidth($screen-md-min)} {
+                  font-size: em(8px);
+                }
+
+                span.text {
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    top: 0;
+                  }
+
+                  span.icon-chevron_right_bold {
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      display: none;
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            svg {
+              width: $liHeight;
+              height: $liHeight;
+              position: absolute;
+              left: 0;
+              top: 0;
+
+              .circle {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                fill: $teal;
+              }
+              .phone {
+                fill: $white;
+              }
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    nav.socialNav {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 84px;
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        display: inline-block;
+        left: 48px;
+        top: 134px;
+      }
+
+      @media #{scrMinWidth($screen-md-min)} {
+        top: 103px;
+      }
+
+      html[lang="fr"] & {
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          top: 105px;
+        }
+
+      }
+
+      ul {
+        @include clearfix;
+
+        li {
+          margin-left: 12px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          /*
+
+          $svgW: 36px;
+          
+          a {
+            width: $svgW;
+            height: $svgW;
+            display: block;
+            overflow: hidden;
+
+            span.text {
+              display: none;
+            }
+            
+            svg {
+              width: $svgW;
+              height: $svgW;
+
+              .twitterTvTube {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                fill: $twitterBlue;
+              }
+              
+              .twitterLogo {
+                fill: $white;
+              }
+
+              .facebookTvTube {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                fill: $facebookBlue;
+              }
+              
+              .facebookLogo {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                fill: $white;
+              }
+
+              .linkedinTvTube {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                fill: $linkedinBlue;
+              }
+              
+              .linkedinLogo {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                fill: $white;
+              }
+
+            }
+
+          }
+
+          */
+
+
+          /*
+          Social hovers technique documented here:
+          http://codepen.io/chrisdothtml/pen/azPYqq
+          */
+
+          // variables
+          $socTransition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+          $socSize: 36px;
+          $socColors: (
+            "twitter": $twitterBlue,
+            "facebook": $facebookBlue,
+            "linkedin": $linkedinBlue
+          );
+
+          a.social-button {
+            width: $socSize;
+            height: $socSize;
+            margin: 0;
+            display: inline-block;
+            overflow: hidden;
+            // background-color: $white;
+            line-height: $socSize;
+            text: {
+              align: center;
+              decoration: none;
+            }
+            //overflow bug fix
+            opacity: .99;
+            border-radius: 36%;
+            position: relative;
+            // box-shadow: 0 0 30px 0 rgba(0,0,0,.05);
+            transition: $socTransition;
+            
+            &:before {
+              content: '';
+              width: 120%;
+              height: 120%;
+              background-color: $white;
+              position: absolute;
+              left: -110%;
+              top: 90%;
+              transform: rotate(45deg);
+              transition: $socTransition;
+            }
+
+            span.text {
+              display: none;
+            }
+            
+            span.fa {
+              vertical-align: middle;
+              font-size: 14px;
+              color: $white;
+              position: relative;
+              transform: scale(0.8);
+              transition: $socTransition;
+            }
+            
+            &:focus, &:hover {
+              
+              &:before {
+                top: -10%;
+                left: -10%;
+              }
+              
+              span.fa {
+                transform: scale(1);
+                z-index: 2;
+              }
+
+            }
+            
+            @each $class, $color in $socColors {
+              
+              &.#{$class} {
+                background-color: #{$color};
+              }
+            
+              &:focus, &:hover {
+                
+                span.fa {
+                  color: #{$color};
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* Footer styles end */

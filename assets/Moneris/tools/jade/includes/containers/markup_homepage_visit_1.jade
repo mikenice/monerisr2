@@ -1,0 +1,36 @@
+doctype html
+html(class="no-js", lang=lang)
+  head
+    include ../../includes/components/markup_global_head.jade
+  body
+    include ../../includes/components/svg_definitions.svg
+    //- p This is a test&nbsp;<span class="icon-chevron_right_normal"></span>
+    //-
+    form(id="form1", action="/", method="post", name="form1")
+    div(class="section container-fluid")
+      div(class="contentHeader row", id="ch")
+        include ../../includes/components/markup_global_header_logo.jade
+        //-
+        main(class="content")
+          include ../../includes/components/markup_homepage_video_fca.jade
+          include ../../includes/components/markup_homepage_site_feature_grid_visit_1.jade
+        include ../../includes/components/markup_global_header.jade
+        div(class="col-xs-12", id="ch-footer") &nbsp;
+      include ../../includes/components/markup_global_footer.jade
+      //- NOTE: Old stuff beneath this comment. Don't uncomment.
+        section(class="home", id="sect")
+          div(class="contentHeader", id="ch")
+            include ../../includes/components/markup_global_header_logo.jade
+            main(class="content")
+            include ../../includes/components/markup_global_header.jade
+            div(id="ch-footer") &nbsp;
+          include ../../includes/components/markup_global_footer.jade
+    include ../../includes/components/scripts.jade
+    script
+      | $(document).ready(function() {
+      |   $('html').removeClass('no-js').addClass('js');
+      |   NiceDetect.init();
+      |   NiceResponsive.init();
+      |   Dropdowns.init();
+      | });
+      | document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

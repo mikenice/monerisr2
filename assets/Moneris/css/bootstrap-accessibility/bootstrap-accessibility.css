@@ -1,0 +1,119 @@
+/* line 2, ../../tools/scss/bootstrap-accessibility/partials/_buttons.scss */
+.btn:focus {
+  outline: dotted 2px #000;
+}
+
+/* line 2, ../../tools/scss/bootstrap-accessibility/partials/_divs.scss */
+div.active:focus {
+  outline: dotted 1px #000;
+}
+
+/* line 2, ../../tools/scss/bootstrap-accessibility/partials/_links.scss */
+a:focus {
+  outline: dotted 1px #000;
+}
+
+/* line 2, ../../tools/scss/bootstrap-accessibility/partials/_close.scss */
+.close:hover, .close:focus {
+  outline: dotted 1px #000;
+}
+
+/* line 4, ../../tools/scss/bootstrap-accessibility/partials/_navigation.scss */
+.nav > li > a:hover, .nav > li > a:focus {
+  outline: dotted 1px #000;
+}
+
+/* line 1, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel-indicators li,
+.carousel-indicators li.active {
+  height: 18px;
+  width: 18px;
+  border-width: 2px;
+  position: relative;
+  box-shadow: 0px 0px 0px 1px #808080;
+  -moz-boxshadow: 0px 0px 0px 1px #808080;
+  -webkit-boxshadow: 0px 0px 0px 1px #808080;
+}
+
+/* line 12, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel-indicators.active li {
+  background-color: rgba(100, 149, 253, 0.6);
+}
+
+/* line 16, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel-indicators.active li.active {
+  background-color: white;
+}
+
+/* line 20, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel-tablist-highlight {
+  display: block;
+  position: absolute;
+  outline: 2px solid transparent;
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 1px transparent;
+  -moz-boxshadow: 0px 0px 0px 1px transparent;
+  -webkit-boxshadow: 0px 0px 0px 1px transparent;
+}
+
+/* line 30, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel-tablist-highlight.focus {
+  outline: 2px solid #6495ED;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 35, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+a.carousel-control:focus {
+  outline: 2px solid #6495ED;
+  background-image: linear-gradient(to right, transparent 0px, rgba(0, 0, 0, 0.5) 100%);
+  box-shadow: 0px 0px 0px 1px #000000;
+  -moz-boxshadow: 0px 0px 0px 1px #000000;
+  -webkit-boxshadow: 0px 0px 0px 1px #000000;
+}
+
+/* line 43, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel-pause-button {
+  position: absolute;
+  top: -30em;
+  left: -300em;
+  display: block;
+}
+
+/* line 50, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel-pause-button.focus {
+  top: 0.5em;
+  left: 0.5em;
+}
+
+/* line 56, ../../tools/scss/bootstrap-accessibility/partials/_carousel.scss */
+.carousel:hover .carousel-caption,
+.carousel.contrast .carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+/* line 1, ../../tools/scss/bootstrap-accessibility/partials/_alerts.scss */
+.alert-success {
+  color: #2d4821;
+}
+
+/* line 4, ../../tools/scss/bootstrap-accessibility/partials/_alerts.scss */
+.alert-info {
+  color: #214c62;
+}
+
+/* line 7, ../../tools/scss/bootstrap-accessibility/partials/_alerts.scss */
+.alert-warning {
+  color: #6c4a00;
+  background-color: #f9f1c6;
+}
+
+/* line 11, ../../tools/scss/bootstrap-accessibility/partials/_alerts.scss */
+.alert-danger {
+  color: #d2322d;
+}
+
+/* line 15, ../../tools/scss/bootstrap-accessibility/partials/_alerts.scss */
+.alert-danger:hover {
+  color: #a82824;
+}

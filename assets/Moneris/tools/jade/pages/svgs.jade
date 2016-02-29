@@ -1,0 +1,129 @@
+- var thSvg = "SVG"
+- var thUse = "<use> element xlink:href attribute value"
+- var thDimensions = "Dimensions (in pixels)"
+- var dimensionsRound = "84px wide x 84px tall"
+- var dimensionsBox = "64px wide x 58px tall"
+
+- var ths = [thSvg, thUse, thDimensions]
+
+- var articlePageTable = [{class: "round", svg: "#icon-article_page_account_updater", dimensions: dimensionsRound}, {class: "round", svg: "#icon-article_page_api", dimensions: dimensionsRound}, {class: "round", svg: "#icon-article_page_batch_processing", dimensions: dimensionsRound}, {class: "round", svg: "#icon-article_page_hosted_pay_page", dimensions: dimensionsRound}, {class: "round", svg: "#icon-article_page_hosted_tokenization", dimensions: dimensionsRound}, {class: "round", svg: "#icon-article_page_online_fraud_tools", dimensions: dimensionsRound}, {class: "round", svg: "#icon-article_page_recurring_billing", dimensions: dimensionsRound}, {class: "box black", svg: "#icon-article_page_tools_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-article_page_tools", dimensions: dimensionsBox}, {class: "round", svg: "#icon-article_page_virtual_terminal", dimensions: dimensionsRound}]
+
+- var categoryPageTable = [{class: "box black", svg: "#icon-category_page_business_management_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-category_page_business_management", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-category_page_ecommerce_solutions_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-category_page_ecommerce_solutions", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-category_page_payment_terminals_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-category_page_payment_terminals", dimensions: dimensionsBox}]
+
+- var contactPageTable = [{class: "box black", svg: "#icon-contact_support_customer_service_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-contact_support_customer_service", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-contact_support_merchant_direct_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-contact_support_merchant_direct", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-contact_support_sales_inquiries_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-contact_support_sales_inquiries", dimensions: dimensionsBox}]
+
+- var merchantSupportTable = [{class: "box black", svg: "#icon-merchant_support_compliance_and_security_black", dimensions:dimensionsBox}, {class: "box", svg: "#icon-merchant_support_compliance_and_security", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-merchant_support_downloadable_guides_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-merchant_support_downloadable_guides", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-merchant_support_trouble_shooting_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-merchant_support_trouble_shooting", dimensions: dimensionsBox}]
+
+- var mobileSolutionsTable = [{class: "box black", svg: "#icon-mobile_solutions_calendar_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-mobile_solutions_calendar", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-mobile_solutions_installation_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-mobile_solutions_installation", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-mobile_solutions_management_paying_solution_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-mobile_solutions_management_paying_solution", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-mobile_solutions_service_support_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-mobile_solutions_service_support", dimensions: dimensionsBox}]
+
+- var paymentProcessingTable = [{class: "box black", svg: "#icon-payment_processing_credit_debit_card_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-payment_processing_credit_debit_card", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-payment_processing_fees_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-payment_processing_fees", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-payment_processing_moneris_terminal_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-payment_processing_moneris_terminal", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-payment_processing_news_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-payment_processing_news", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-payment_processing_payment_terminal_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-payment_processing_payment_terminal", dimensions: dimensionsBox}]
+
+- var productsServicesTable = [{class: "box black", svg: "#icon-products_services_business_management_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-products_services_business_management", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-products_services_ecommerce_solutions_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-products_services_ecommerce_solutions", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-products_services_payment_terminals_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-products_services_payment_terminals", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-products_services_quick_links_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-products_services_quick_links", dimensions: dimensionsBox}, {class: "box black", svg: "#icon-products_services_tools_black", dimensions: dimensionsBox}, {class: "box", svg: "#icon-products_services_tools", dimensions: dimensionsBox}]
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Moneris 2015 Realize list of SVGs
+    meta(name="robots", content="noindex, nofollow")
+    link(rel="stylesheet", media="all", href="/assets/Moneris/css/svg.css")
+  body
+    include ../includes/components/svg_definitions.svg
+    h1 Article pages SVGs
+    table
+      thead
+        tr
+          each th in ths
+            th= th
+      tbody
+        each tr in articlePageTable
+          tr
+            td
+              svg(class=tr.class)
+                use(xlink:href=tr.svg)
+            td= tr.svg
+            td= tr.dimensions
+    h1 Category pages SVGs
+    table
+      thead
+        tr
+          each th in ths
+            th= th
+      tbody
+        each tr in categoryPageTable
+          tr
+            td
+              svg(class=tr.class)
+                use(xlink:href=tr.svg)
+            td= tr.svg
+            td= tr.dimensions
+    h1 Contact and Support pages SVGs
+    table
+      thead
+        tr
+          each th in ths
+            th= th
+      tbody
+        each tr in contactPageTable
+          tr
+            td
+              svg(class=tr.class)
+                use(xlink:href=tr.svg)
+            td= tr.svg
+            td= tr.dimensions
+    h1 Merchant Support pages SVGs
+    table
+      thead
+        tr
+          each th in ths
+            th= th
+      tbody
+        each tr in merchantSupportTable
+          tr
+            td
+              svg(class=tr.class)
+                use(xlink:href=tr.svg)
+            td= tr.svg
+            td= tr.dimensions
+    h1 Mobile Solutions pages SVGs
+    table
+      thead
+        tr
+          each th in ths
+            th= th
+      tbody
+        each tr in mobileSolutionsTable
+          tr
+            td
+              svg(class=tr.class)
+                use(xlink:href=tr.svg)
+            td= tr.svg
+            td= tr.dimensions
+    h1 Payment Processing pages SVGs
+    table
+      thead
+        tr
+          each th in ths
+            th= th
+      tbody
+        each tr in paymentProcessingTable
+          tr
+            td
+              svg(class=tr.class)
+                use(xlink:href=tr.svg)
+            td= tr.svg
+            td= tr.dimensions
+    h1 Products and Services pages SVGs
+    table
+      thead
+        tr
+          each th in ths
+            th= th
+      tbody
+        each tr in productsServicesTable
+          tr
+            td
+              svg(class=tr.class)
+                use(xlink:href=tr.svg)
+            td= tr.svg
+            td= tr.dimensions

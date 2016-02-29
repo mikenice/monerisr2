@@ -1,0 +1,4694 @@
+/* Header styles begin */
+
+div.headerBackground {
+  width: 100%;
+  height: $headerHeight;
+  display: none;
+  background-color: $black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  // z-index: 11;
+
+  @media #{scrMinWidth($screen-sm-min)} {
+    // display: none;
+  }
+
+}
+
+header {
+  width: 100%;
+  height: $headerHeight;
+  background-color: $headerBlue;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 17;
+
+  @media #{scrMinWidth($screen-sm-min)} {
+    height: $headerHeightSm;
+  }
+
+  @media #{scrMinWidth($screen-md-min)} {
+    height: $headerHeightMd;
+  }
+
+  div.innerCont {
+    height: $headerHeight;
+    position: relative;
+
+    @media #{scrMinWidth($screen-md-min)} {
+      // max-width: $innerContMaxWidthMd;
+      width: $screen-md-min - (10 * 2);
+      height: $headerHeightMd;
+    }
+
+    nav.globalNav {
+      height: $headerHeight;
+      position: relative;
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        height: $headerHeightSm;
+      }
+
+      @media #{scrMinWidth($screen-md-min)} {
+        height: $headerHeightMd;
+      }
+
+      $liTlWidthSm: 132px;
+      $liTlHeightSm: $headerHeightSm;
+      $liTlMargLeftSm: 15px;
+
+      $liTlHeightMd: $headerHeightMd;
+
+      $chevronWidthSm: 12px;
+      $chevronHeightSm: 8px;
+      $chevronRightWidthSm: 7px;
+      $chevronRightHeightSm: 10px;
+
+      $backButtonHeight: 58px;
+      $ulTlHeight: 400px + 1;
+      $aHeight: 65px;
+      $aPaddingTop: 16px;
+      $aPaddingLeft: 20px;
+
+      $topSmartphoneButtonsWidth: 60px;
+
+      div.tlWrap {
+        height: $headerHeight;
+        position: relative;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          height: $headerHeightSm;
+          margin: 0 0 0 122px;
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          height: $headerHeightMd;
+          margin-left: 186px;
+        }
+
+        ul.topLevel {
+          width: 100%;
+          height: $ulTlHeight;
+          display: none;
+          // display: block;
+          // background-color: $black;
+          background-color: $headerHoverBlue;
+          position: absolute;
+          left: 0;
+          top: $headerHeight;
+          z-index: 2;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            height: auto;
+            margin-top: 0 - ($liTlHeightSm / 2);
+            display: block;
+            overflow: visible;
+            background-color: transparent;
+            top: 50%;
+            z-index: 1;
+            @include clearfix;
+            overflow: visible;
+          }
+
+          @media #{scrMinWidth($screen-md-min)} {
+            margin-top: 0 - ($liTlHeightMd / 2);
+          }
+
+          li.tl {
+            width: 50%;
+            
+            @media #{scrMinWidth($screen-sm-min)} {
+              width: auto;
+              float: left;
+            }
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            $divotWidth: 6px;
+            $divotHeight: 12px;
+            $divotWidthSm: 10px;
+            $divotHeightSm: 20px;
+
+            a {
+              height: $aHeight;
+              padding: 0 40px 0 $aPaddingLeft;
+              display: block;
+              line-height: $aHeight;
+              @include avMed;
+              position: relative;
+              color: $white;
+              text-decoration: none;
+              // background-color: $black;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                // width: $liTlWidthSm - ($liTlMargLeftSm * 2);
+                height: $liTlHeightSm;
+                // margin-left: $liTlMargLeftSm;
+                padding: 0 $liTlMargLeftSm;
+                line-height: $liTlHeightSm;
+                background-color: transparent;
+              }
+
+              @media #{scrMinWidth($screen-md-min)} {
+                height: $liTlHeightMd;
+              }
+
+              svg.divot {
+                width: $divotWidth;
+                height: $divotHeight;
+                margin-top: 0 - ($divotHeight / 2);
+                display: none;
+                position: absolute;
+                right: -1px;
+                top: 50%;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  width: $divotWidthSm;
+                  height: $divotHeightSm;
+                  margin-top: 0 - ($divotHeightSm / 2);
+                  right: 0;
+                }
+
+                .divot {
+                  fill: $thirdLevelBlue;
+                }
+
+              }
+
+              span.text {
+                width: 100px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: em(8px);
+                line-height: em(13px);
+              
+                @media #{scrMinWidth($screen-sm-min)} {
+                  width: auto;
+                  font-size: em(9px);
+                  letter-spacing: em(1px);
+                }
+                
+                svg {
+                  position: relative;
+
+                  &.chevronDown {
+                    display: none;
+
+                    .chevron {
+                      fill: $white;
+                    }
+                    
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      width: $chevronWidthSm;
+                      height: $chevronHeightSm;
+                      display: inline-block;
+                      margin-left: 1px;
+                      top: 1px;
+                    }
+
+                    &.chevronDownHoverTeal {
+                      display: none;
+
+                      .chevron {
+                        fill: $teal;
+                      }
+
+                    }
+
+                  }
+
+                  &.chevronUp {
+                    display: none;
+
+                    .chevron {
+                      fill: $white;
+                    }
+                    
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      width: $chevronWidthSm;
+                      height: $chevronHeightSm;
+                      // display: inline-block;
+                      display: none;
+                      margin-left: 3px;
+                      top: 1px;
+                    }
+
+                    &.chevronUpHoverTeal {
+                      display: none;
+
+                      .chevron {
+                        fill: $teal;
+                      }
+
+                    }
+
+                  }
+
+                  &.chevronRight {
+                    width: $chevronRightWidthSm;
+                    height: $chevronRightHeightSm;
+                    margin-left: 3px;
+                    top: 2px;
+
+                    .chevron {
+                      fill: $white;
+                    }
+
+                    &.chevronRightHoverTeal {
+                      display: none;
+
+                      .chevron {
+                        fill: $teal;
+                      }
+
+                    }
+                    
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      display: none;
+                    }
+
+                  }
+
+                  &.chevronRightBold {
+                    width: $chevronRightWidthSm;
+                    height: $chevronRightHeightSm;
+                    margin-left: 3px;
+                    top: 2px;
+
+                    .chevron {
+                      fill: $white;
+                    }
+
+                    &.chevronRightBoldHoverTeal {
+
+                      .chevron {
+                        fill: $teal;
+                      }
+
+                    }
+                    
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      display: none;
+                    }
+
+                  }
+
+                }
+
+              }
+
+              &:hover, &:focus {
+                color: $teal;
+                // background-color: $headerHoverBlue;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  // color: $teal;
+                  // background-color: transparent;
+                }
+
+                span.text {
+
+                  svg {
+
+                    &.chevronRight {
+                      display: none;
+                    }
+
+                    &.chevronRightHoverTeal {
+                      display: inline-block;
+  
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        display: none;
+                      }
+
+                    }
+
+                    &.chevronDown {
+                      display: none;
+                    }
+
+                    &.chevronDownHoverTeal {
+                      display: none;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        display: inline-block;
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+              &:active {
+                color: $white;
+                background-color: $darkTeal;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  color: $teal;
+                  background-color: transparent;  
+                }
+
+                span.text {
+
+                  svg {
+
+                    &.chevronRight {
+                      display: inline-block;
+  
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        display: none;
+                      }
+
+                    }
+
+                    &.chevronRightHoverTeal {
+                      display: none;
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            ul.secondLevel {
+              width: 50%;
+              height: $ulTlHeight;
+              display: none;
+              background-color: $thirdLevelBlue;
+              position: absolute;
+              left: 50%;
+              top: 0;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                width: 230px;
+                height: auto;
+                background-color: $headerHoverBlue;
+                left: 0;
+                top: $headerHeightSm;
+              }
+
+              @media #{scrMinWidth($screen-md-min)} {
+                width: 308px;
+                top: $headerHeightMd;
+              }
+
+              li.sl {
+
+                a {
+                  padding-right: $aPaddingLeft;
+                  // background-color: $headerHoverBlue;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    height: 65px;
+                    line-height: 65px;
+                  }
+
+                  span.text {
+                    width: auto;
+                  }
+
+                  &:hover, &:focus {
+                    color: $teal;
+                    // background-color: $darkTeal;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      color: $white;
+                      background-color: $darkTeal;
+                    }
+
+                  }
+
+                }
+
+                &.prodServEcomSol {
+
+                  a {
+
+                    span.text {
+                      width: 100px;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        width: auto;
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+              ul.thirdLevel {
+                display: none;
+                width: 100%;
+                height: $ulTlHeight;
+                display: none;
+                background-color: $headerHoverBlue;
+                position: absolute;
+                left: 100%;
+                top: 0;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  height: auto;
+                  background-color: $thirdLevelBlue;
+                }
+
+                li.thl {
+
+                  a {
+                    padding-right: $aPaddingLeft;
+                    background-color: $headerHoverBlue;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      background-color: $thirdLevelBlue;
+                    }
+
+                    &:hover {
+                      background-color: $black;
+                    }
+
+                    span.text {
+                      width: auto;
+                    }
+
+                  }
+
+                  /*
+
+                  &.prodServEcomSol {
+
+                    a {
+
+                      span.text {
+                        width: 100px;
+                      }
+
+                    }
+
+                  }
+
+                  */
+
+                }
+
+              }
+
+            }
+
+            &.prodServ {
+
+              a {
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  // width: 76px;
+                  width: 96px;
+                }
+
+                @media #{scrMinWidth($screen-md-min)} {
+                  width: auto;
+                }
+
+              }
+
+              ul.secondLevel {
+
+                li {
+
+                  a {
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      width: auto;
+                    }
+
+                  }
+
+                }
+
+              }
+
+              /*
+
+              ul.secondLevel {
+                display: block;
+              }
+
+              */
+
+            }
+
+            &.partDev {
+
+              a {
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  // width: 92px;
+                  width: 118px;
+                }
+
+                @media #{scrMinWidth($screen-md-min)} {
+                  width: auto;
+                }
+
+              }
+
+              ul.secondLevel {
+
+                li {
+
+                  a {
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      width: auto;
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            &.login {
+              border-bottom: 1px solid $loginBorderBlue;
+              position: relative;
+
+              $bloginWidthSm: 58px;
+              $bloginHeightSm: 12px;
+              $bloginPadTopSm: 2px;
+
+              $silhouetteWidthSm: 18px;
+              $silhouetteHeightSm: 18px;
+
+              $padlockWidthSm: 14px;
+              $padlockHeightSm: 20px;
+
+              $chevronWidthSm: 8px;
+              $chevronHeightSm: 4px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                height: $liTlHeightSm;
+                // margin-right: 98px;
+                margin-right: 86px;
+                float: right;
+                border-bottom-width: 0;
+              }
+
+              @media #{scrMinWidth($screen-md-min)} {
+                height: $liTlHeightMd;
+              }
+
+              div.loginWrapper {
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  display: inline-block;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                }
+
+                a.btnLogin {
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    height: $headerHeightSm;
+                    padding: 0 $liTlMargLeftSm;
+                    display: block;
+                    line-height: $headerHeightSm;
+                    @include avBlack;
+                    // background-color: red;
+                    background-color: transparent;
+                  }
+
+                  @media #{scrMinWidth($screen-md-min)} {
+                    height: $headerHeightMd;
+                    line-height: $headerHeightMd;
+                  }
+
+                  span.text {
+                    padding-left: $silhouetteWidthSm + 8;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      height: $bloginHeightSm - $bloginPadTopSm;
+                      padding: {
+                        top: $bloginPadTopSm;
+                        right: $chevronWidthSm + 7;
+                        left: $padlockWidthSm + 7;
+                      }
+                      display: inline-block;
+                      font-size: em(7px);
+                      line-height: em(10px);
+                      text: {
+                        transform: uppercase;
+                        decoration: none;
+                      }
+                      color: $white;
+                      position: relative;
+                    }
+
+                    @media #{scrMinWidth($screen-md-min)} {
+                      // margin-top: 0 - (($bloginHeightMd + $bloginPadTopMd) / 2);
+                    }
+
+                    svg {
+                      position: absolute;
+
+                      &.silhouette {
+                        width: $silhouetteWidthSm;
+                        height: $silhouetteHeightSm;
+                        margin-top: 0 - (($silhouetteHeightSm / 2) + 1);
+                        left: $aPaddingLeft;
+                        top: 50%;
+                        display: none;
+
+                        .heads {
+                          fill: $white;
+                        }
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      &.padlockIcon {
+                        width: $padlockWidthSm;
+                        height: $padlockHeightSm;
+                        display: block;
+                        margin-top: 0 - (($padlockHeightSm / 2) + 3);
+                        left: $aPaddingLeft;
+                        top: 50%;
+                        // display: none;
+
+                        .padlock {
+                          fill: $white;
+                        }
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          // width: $padlockWidthSm;
+                          // height: $padlockHeightSm;
+                          margin-top: 0;
+                          display: block;
+                          left: 0;
+                          top: -4px;
+                        }
+
+                        &.padlockIconHoverTeal {
+                          display: none;
+
+                          .padlock {
+                            fill: $teal;
+                          }
+
+                        }
+
+                      }
+
+                      &.chevronDown {
+                        display: none;
+
+                        .chevron {
+                          fill: $white;
+                        }
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          width: $chevronWidthSm;
+                          height: $chevronHeightSm;
+                          display: block;
+                          right: 0;
+                          top: 5px;
+                        }
+
+                        &.chevronDownHoverTeal {
+                          display: none;
+
+                          .chevron {
+                            fill: $teal;
+                          }
+
+                        }
+
+                      }
+
+                      &.chevronUp {
+                        display: none;
+
+                        .chevron {
+                          fill: $white;
+                        }
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          width: $chevronWidthSm;
+                          height: $chevronHeightSm;
+                          right: 0;
+                          top: 5px;
+                        }
+
+                        &.chevronUpHoverTeal {
+
+                          .chevron {
+                            fill: $teal;
+                          }
+
+                        }
+
+                      }
+
+                      &.chevronRight {
+                        width: $chevronRightWidthSm;
+                        height: $chevronRightHeightSm;
+                        margin-left: 1px;
+                        position: relative;
+                        top: 1px;
+
+                        .chevron {
+                          fill: $white;
+                        }
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                        &.chevronRightHoverTeal {
+                          display: none;
+
+                          .chevron {
+                            fill: $teal;
+                          }
+
+                        }
+
+                      }
+
+                      &.chevronRightBold {
+                        width: $chevronRightWidthSm;
+                        height: $chevronRightHeightSm;
+                        margin-left: 1px;
+                        position: relative;
+                        top: 1px;
+
+                        .chevron {
+                          fill: $white;
+                        }
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                        &.chevronRightBoldHoverTeal {
+                          display: none;
+
+                          .chevron {
+                            fill: $teal;
+                          }
+
+                        }
+
+                      }
+                               
+                    }
+
+                  }
+
+                  &:hover, &:focus {
+                    background-color: $headerHoverBlue;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      background-color: transparent;
+                    }
+
+                    span.text {
+                      color: $teal;
+
+                      svg.padlockIcon {
+                        display: none;
+                      }
+
+                      svg.padlockIconHoverTeal {
+                        display: block;
+                      }
+
+                      svg.chevronRight {
+                        display: none;
+                      }
+
+                      svg.chevronRightHoverTeal {
+                        display: inline-block;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronDown {
+                        display: none;
+                      }
+
+                      svg.chevronDownHoverTeal {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: inline-block;
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                  &:active {
+                    color: $white;
+                    background-color: $darkTeal;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      color: $teal;
+                      background-color: transparent;  
+                    }
+
+                    span.text {
+
+                      svg {
+
+                        &.padlockIcon {
+                          display: inline-block;
+      
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;
+                          }
+
+                        }
+
+                        &.padlockIconHoverTeal {
+                          display: none;
+      
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: block;
+                          }
+
+                        }
+
+                        &.chevronRight {
+                          display: inline-block;
+      
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;
+                          }
+
+                        }
+
+                        &.chevronRightHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                    }
+
+                  }
+                  
+                }
+
+                ul.dropdown-menu {
+                  width: 100%;
+                  min-width: auto;
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  border: {
+                    width: 0;
+                    radius: 0;
+                  }
+                  box-shadow: none;
+                  background-color: $thirdLevelBlue;
+                  left: 100%;
+                  top: 0 - ($aHeight * 3);
+
+                  $dmWidthSm: 260px;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    width: $dmWidthSm;
+                    margin-left: 0 - ($dmWidthSm / 2);
+                    padding: 20px 0;
+                    background-color: $headerHoverBlue;
+                    left: 50%;
+                    top: 100%;
+                  }
+
+                  & > li {
+                    font-size: em(9px);
+                    line-height: em(10px);
+
+                    & > a {
+                      height: $aHeight;
+                      padding: 0 $aPaddingLeft;
+                      display: block;
+                      line-height: $aHeight;
+                      @include avMed;
+                      text-decoration: none;
+                      color: $white;
+                      // background-color: $headerHoverBlue;
+                      position: relative;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        height: auto;
+                        padding: 20px 0;
+                        // display: inline-block;
+                        line-height: em(10px);
+                        text-align: center;
+                        // background-color: $black;
+                        position: static
+                      }
+
+                      $chevronWidthSm: 4px;
+                      $chevronHeightSm: 8px;
+
+                      span.text {
+                        width: 100px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: em(10px);
+                        line-height: em(13px);
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          width: 148px;
+                          margin: 0 auto;
+                          padding: 0;
+                          font-size: em(10px);
+                          text: {
+                            align: left;
+                            transform: none;
+                          }
+                          position: relative;
+                        }
+
+                        svg {
+
+                          &.chevronRight {
+                            width: $chevronRightWidthSm;
+                            height: $chevronRightHeightSm;
+                            margin-left: 1px;
+                            position: relative;
+                            top: 1px;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              width: $chevronWidthSm;
+                              height: $chevronHeightSm;
+                              display: inline-block;
+                              margin-left: 0;
+                              left: 20px;
+                            }
+
+                            .chevron {
+                              fill: $white;
+                            }
+
+                            &.chevronRightHoverTeal {
+                              display: none;
+
+                              .chevron {
+                                fill: $teal;
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                      &:hover, &:focus {
+                        color: $teal;
+                        background-color: transparent;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          // font-weight: bold;
+                          color: $teal;
+                          // background-color: $headerHoverBlue;
+                        }
+
+                        span.text {
+
+                          svg.chevronRight {
+                            display: none;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              // display: inline-block;
+                            }
+
+                          }
+
+                          svg.chevronRightHoverTeal {
+                            display: inline-block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              // display: none;  
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+                &.open {
+
+                  a.btnLogin {
+
+                    span.text {
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        color: $teal;
+                      }
+
+                      svg.padlockIcon {
+                        
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+                        
+                      }
+
+                      svg.padlockIconHoverTeal {
+                        
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: inline-block;
+                        }
+                        
+                      }
+
+                      svg.chevronDown {
+                        
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+                        
+                      }
+
+                      svg.chevronDownHoverTeal {
+                        
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+                        
+                      }
+
+                      svg.chevronUp {
+                        
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+                        
+                      }
+
+                      svg.chevronUpHoverTeal {
+                        
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: inline-block;
+                        }
+                        
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      a.backButton {
+        width: 100%;
+        height: $backButtonHeight;
+        display: none;
+        line-height: $backButtonHeight;
+        text-decoration: none;
+        color: $white;
+        background-color: $black;
+        position: absolute;
+        left: 0;
+        top: $headerHeight;
+
+        span.text {
+          margin: 0 $liTlMargLeftSm;
+          padding-left: $chevronRightWidthSm + 12;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: em(8px);
+          line-height: em(10px);
+          text-transform: uppercase;
+          position: relative;
+
+          svg {
+            width: $chevronRightWidthSm;
+            height: $chevronRightHeightSm;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            .chevron {
+              fill: $white;
+            }
+
+          }
+
+        }
+
+        &:hover {
+          background-color: $headerHoverBlue;
+        }
+
+      }
+
+      $blWidthSm: 58px;
+      $blHeightSm: 12px;
+      $blPadTopSm: 2px;
+
+      $flagWidthSm: 18px;
+      $flagHeightSm: 12px;
+
+      $chevronWidthSm: 8px;
+      $chevronHeightSm: 4px;
+
+      div.languageWrapper {
+        display: none;
+        // display: inline-block;
+        position: absolute;
+        left: 20px;
+        // bottom: 0 - ($ulTlHeight - $aPaddingTop);
+        top: $headerHeight + ((($aHeight * 4) + 1) + $aPaddingTop);
+        z-index: 2;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          display: inline-block;
+          left: auto;
+          right: 0;
+          bottom: auto;
+          top: 0;
+          z-index: 1;
+        }
+
+        a.btnLanguage {
+          // height: auto;
+          // padding: 0 $liTlMargLeftSm;
+          display: block;
+          // line-height: $headerHeightSm;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            height: $headerHeightSm;
+            padding: 0 $liTlMargLeftSm;
+            // display: block;
+            line-height: $headerHeightSm;
+          }
+
+          @media #{scrMinWidth($screen-md-min)} {
+            height: $headerHeightMd;
+            line-height: $headerHeightMd;
+          }
+
+          span.text {
+            height: $blHeightSm - $blPadTopSm;
+            padding: {
+              top: $blPadTopSm;
+              right: $chevronWidthSm + 7;
+              left: $flagWidthSm + 7;
+            }
+            display: inline-block;
+            vertical-align: middle;
+            font-size: em(7px);
+            line-height: em(10px);
+            @include avBlack;
+            text: {
+              transform: uppercase;
+              decoration: none;
+            }
+            color: $white;
+            position: relative;
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              
+            }
+
+            svg {
+              position: absolute;
+
+              &.flag {
+                width: $flagWidthSm;
+                height: $flagHeightSm;
+                left: 0;
+                top: 0;
+
+                .white {
+                  fill: $white;
+                }
+
+                .canadaRed {
+                  fill: $canadaRed;
+                }
+
+                .usaClipPath {
+                  clip-path: url(#SVGID_2_);
+                }
+
+                .usaWhite {
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  fill: $white;
+                }
+
+                .usaBlue {
+                  fill-rule: evenodd;
+                  clip-rule: evenodd;
+                  fill: $usaBlue;
+                }
+
+                .usaRed {
+                  fill: $usaRed;
+                }
+
+                use {
+                  display: none;
+                }
+
+              }
+
+              &.chevronDown {
+                width: $chevronWidthSm;
+                height: $chevronHeightSm;
+                right: 0;
+                top: 5px;
+
+                .chevron {
+                  fill: $white;
+                }
+
+                &.chevronDownHoverTeal {
+                  display: none;
+
+                  .chevron {
+                    fill: $teal;
+                  }
+
+                }
+
+              }
+
+              &.chevronUp {
+                width: $chevronWidthSm;
+                height: $chevronHeightSm;
+                display: none;
+                right: 0;
+                top: 5px;
+
+                .chevron {
+                  fill: $white;
+                }
+
+                &.chevronUpHoverTeal {
+                  display: none;
+
+                  .chevron {
+                    fill: $teal;
+                  }
+
+                }
+
+              }
+                       
+            }
+
+          }
+
+          &:hover, &:focus {
+            // background-color: $black;
+
+            span.text {
+              color: $teal;
+
+              svg.chevronDown {
+                display: none;
+              }
+
+              svg.chevronDownHoverTeal {
+                display: block;
+              }
+
+            }
+
+          }
+
+          &.can {
+
+            span.text {
+
+              svg.flag {
+
+                use.can {
+                  display: block;
+                }
+
+              }
+
+            }
+
+          }
+
+          &.usa {
+
+            span.text {
+
+              svg.flag {
+
+                use.usa {
+                  display: block;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        ul.dropdown-menu {
+          min-width: auto;
+          // display: block;
+          margin: 12px 0 0;
+          padding: 0;
+          list-style: none;
+          border: {
+            width: 0;
+            radius: 0;
+          }
+          box-shadow: none;
+          background-color: $headerHoverBlue;
+          right: auto;
+          left: 0 - $aPaddingLeft;
+
+          $dmWidthSm: 260px;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            width: $dmWidthSm;
+            margin: 0;
+            padding: 20px 0;
+            // background-color: $black;
+            left: auto;
+            right: 0;
+          }
+
+          & > li {
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              font-size: em(9px);
+              line-height: em(10px);
+            }
+
+            & > a {
+              padding: {
+                top: 10px;
+                bottom: 10px;
+              }
+              @include avBlack;
+              text-align: center;
+              color: $white;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                padding: 20px 0;
+              }
+
+              $chevronWidthSm: 4px;
+              $chevronHeightSm: 8px;
+
+              span.text {
+                width: 138px;
+                margin: 0 auto;
+                padding: 0 0 0 ($flagWidthSm + 20);
+                display: inline-block;
+                text-align: left;
+                position: relative;
+
+                svg {
+                
+                  &.flag {
+                    width: $flagWidthSm;
+                    height: $flagHeightSm;
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+
+                    .white {
+                      fill: $white;
+                    }
+
+                    .canadaRed {
+                      fill: $canadaRed;
+                    }
+
+                    .usaClipPath {
+                      clip-path: url(#SVGID_2_);
+                    }
+
+                    .usaWhite {
+                      fill-rule: evenodd;
+                      clip-rule: evenodd;
+                      fill: $white;
+                    }
+
+                    .usaBlue {
+                      fill-rule: evenodd;
+                      clip-rule: evenodd;
+                      fill: $usaBlue;
+                    }
+
+                    .usaRed {
+                      fill: $usaRed;
+                    }
+
+                  }
+
+                  &.chevronRight {
+                    width: $chevronWidthSm;
+                    height: $chevronHeightSm;
+                    position: relative;
+                    left: 20px;
+
+                    .chevron {
+                      fill: $white;
+                    }
+
+                    &.chevronRightHoverTeal {
+                      display: none;
+
+                      .chevron {
+                        fill: $teal;
+                      }
+
+                    }
+
+                  }
+
+                  &.arrow {
+                    width: 14px;
+                    height: 14px;
+                    position: relative;
+                    left: 38px;
+                    top: 2px;
+
+                    .arrow {
+                      fill: $white;
+                    }
+
+                    .square {
+                      fill: $white
+                    }
+
+                    &.arrowHoverTeal {
+                      display: none;
+
+                      .arrow {
+                        fill: $teal;
+                      }
+
+                      .square {
+                        fill: $teal
+                      }
+
+                    }
+                    
+                  }
+
+                }
+
+              }
+
+              &:hover, &:focus {
+                color: $teal;
+                background-color: transparent;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  // @include avBlack;
+                  // background-color: $black;
+                }
+
+                span.text {
+
+                  svg.chevronRight {
+                    display: none;
+                  }
+
+                  svg.chevronRightHoverTeal {
+                    display: inline-block;
+                  }
+
+                  svg.arrow {
+                    display: none;
+                  }
+
+                  svg.arrowHoverTeal {
+                    display: inline-block;
+                  }
+
+                }
+
+              }
+
+            }
+
+            &.usa {
+              display: none;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: block;
+                background: {
+                  image: image-url("static/language_bg_usa.png");
+                  repeat: no-repeat;
+                  position: left top;
+                  size: 100%;
+                }
+              }
+
+            }
+
+          }
+
+        }
+
+        &.open {
+          
+          a.btnLanguage {
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              // background-color: $black;
+            }
+
+            span.text {
+
+              svg.chevronDown {
+                display: none;
+              }
+
+              svg.chevronUp {
+                display: none;
+              }
+
+              svg.chevronUpHoverTeal {
+                display: inline-block;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      $bpWidth: 30px;
+      $bpHeight: 22px;
+
+      a.btnPhone {
+        width: $topSmartphoneButtonsWidth;
+        height: $headerHeight;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        right: $topSmartphoneButtonsWidth * 2;
+        top: 0;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          display: none;
+        }
+
+        span {
+          display: none;
+        }
+
+        $svgWidth: 20px;
+        $svgHeight: 22px;
+
+        svg.phone {
+          width: $svgWidth;
+          height: $svgHeight;
+          margin: {
+            top: 0 - ($svgHeight / 2);
+            left: 0 - ($svgWidth / 2);
+          }
+          position: absolute;
+          left: 50%;
+          top: 50%;
+
+          .phone {
+            fill: $white;
+          }
+
+          &.phoneHoverTeal {
+            display: none;
+
+            .phone {
+              fill: $teal;
+            }
+
+          }
+
+        }
+
+        &:hover, &:focus {
+          // background-color: $headerHoverBlue;
+
+          svg {
+
+            &.phone {
+              display: none;
+            }
+
+            &.phoneHoverTeal {
+              display: block;
+            }
+
+          }
+
+        }
+
+      }
+
+      $bsWidth: 30px;
+      $bsHeight: 22px;
+      $bsWidthSm: 20px;
+      $bsHeightSm: 20px;
+
+      div.searchWrapper {
+        width: $topSmartphoneButtonsWidth;
+        height: $headerHeight;
+        position: absolute;
+        right: $topSmartphoneButtonsWidth;
+        top: 0;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          width: auto;
+          height: $headerHeightSm;
+          margin-top: 0;
+          // right: 214px;
+          right: 194px;
+          top: 0;
+          z-index: 2;
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          height: $headerHeightMd;
+        }
+
+        a.btnSearch {
+          height: $headerHeight;
+          overflow: hidden;
+          display: block;
+          position: relative;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            width: auto;
+            height: $headerHeightSm;
+            padding: 0 30px;
+            // background-color: pink;
+          }
+
+          @media #{scrMinWidth($screen-md-min)} {
+            height: $headerHeightMd;
+          }
+
+          span {
+            display: none;
+          }
+
+          $svgWidth: 22px;
+          $svgHeight: 22px;
+          $closeWidthSm: 16px;
+
+          svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            &.magnifyingGlass {
+              width: $svgWidth;
+              height: $svgHeight;
+              margin: {
+                top: 0 - ($svgHeight / 2);
+                left: 0 - ($svgWidth / 2);
+              }
+
+              .magnifyingGlass {
+                fill: $white;
+              }
+
+              &.magnifyingGlassHoverTeal {
+                display: none;
+
+                .magnifyingGlass {
+                  fill: $teal;
+                }
+
+              }
+
+            }
+
+            &.closeX {
+              width: $closeWidthSm;
+              height: $closeWidthSm;
+              margin: (0 - ($closeWidthSm / 2)) 0 0 (0 - ($closeWidthSm / 2));
+              display: none;
+
+              .closeX {
+                fill-rule: evenodd;
+                clip-rule: evenodd;
+                fill: $white;
+              }
+
+              &.closeXhoverTeal {
+
+                .closeX {
+                  fill: $teal;
+                }
+
+              }
+
+            }
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              width: $bsWidthSm;
+              height: $bsHeightSm;
+              margin: {
+                top: 0 - ($bsHeightSm / 2);
+                left: 0 - ($bsWidthSm / 2);
+              }
+            }
+
+          }
+
+          &:hover, &:focus {
+            // background-color: $headerHoverBlue;
+            background-color: transparent;
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              // background-color: transparent;
+            }
+
+            svg {
+
+              &.magnifyingGlass {
+                display: none;
+              }
+
+              &.magnifyingGlassHoverTeal {
+                display: block;
+              }
+
+            }
+
+          }
+
+        }
+
+        $dmWidthSm: 260px;
+        $dmHeightSm: 64px;
+        $dmPaddingSm: 15px;
+
+        div.searchOverlay {
+          width: $dmWidthSm;
+          height: $dmHeightSm;
+          display: none;
+          line-height: $dmHeightSm;
+          text-align: center;
+          background-color: $black;
+          position: absolute;
+          right: 0 - $topSmartphoneButtonsWidth;
+          top: 100%;
+          z-index: 1000;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            // display: none;
+            right: 0;
+          }
+
+          div.searchForm {
+            width: $dmWidthSm - ($dmPaddingSm * 2);
+            margin: 0 auto;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            position: relative;
+            @include clearfix;
+
+            input[type="search"] {
+              -moz-appearance: none;
+              -webkit-appearance: none;
+              // width: 168px;
+              width: 80%;
+              padding: 8px 10px;
+              float: left;
+              font: {
+                size: em(8px);
+                weight: bold;
+              }
+              border: {
+                width: 0;
+                radius: 2px 0 0 2px;
+              }
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                // width: 188px;
+              }
+
+            }
+
+            a.btnSubmitSearch {
+              // width: 42px;
+              width: 20%;
+              height: 32px;
+              float: right;
+              display: block;
+              overflow: hidden;
+              background-color: $teal;
+              border-radius: 0 2px 2px 0;
+              position: relative;
+
+              span {
+                display: none;
+              }
+
+              $svgWidthSm: 18px;
+
+              svg {
+                width: $svgWidthSm;
+                height: $svgWidthSm;
+                margin: (0 - ($svgWidthSm / 2)) 0 0 (0 - ($svgWidthSm / 2));
+                position: absolute;
+                left: 50%;
+                top: 50%;
+
+                .magnifyingGlass {
+                  fill: $white;
+                }
+
+              }
+
+            }
+
+          }
+
+          a.btnCloseSearchField {
+            display: none;
+          }
+
+        }
+
+        &.open {
+
+          a.btnSearch {
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              // background-color: $black;
+              background-color: transparent;
+            }
+
+            svg {
+
+              &.magnifyingGlass {
+                display: none;
+              }
+
+              &.closeX {
+                display: block;
+              }
+
+              &.closeXhoverTeal {
+                display: none;
+              }
+
+            }
+
+            &:hover, &:focus {
+
+              svg {
+
+                &.closeX {
+                  display: none;
+                }
+
+                &.closeXhoverTeal {
+                  display: block;
+                }
+
+              }
+
+            }
+
+          }
+
+          div.searchOverlay {
+            display: block;
+          }
+
+        }
+
+      }
+      $btmWidth: 30px;
+      $btmHeight: 22px;
+
+      a.btnToggleMenu {
+        width: $topSmartphoneButtonsWidth;
+        height: $headerHeight;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          display: none;
+        }
+
+        span {
+          display: none;
+        }
+
+        $svgWidth: 30px;
+        $svgHeight: 18px;
+
+        svg.hamburger {
+          width: $svgWidth;
+          height: $svgHeight;
+          margin: {
+            top: 0 - ($svgHeight / 2);
+            left: 0 - ($svgWidth / 2);
+          }
+          position: absolute;
+          left: 50%;
+          top: 50%;
+
+          .hamburger {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: $white;
+          }
+
+          &.hamburgerHoverTeal {
+            display: none;
+
+            .hamburger {
+              fill: $teal;
+            }
+
+          }
+
+        }
+
+        $svgCloseWidth: 30px;
+        $svgCloseHeight: 18px;
+
+        svg.closeX {
+          width: $svgCloseWidth;
+          height: $svgCloseHeight;
+          margin: {
+            top: 0 - ($svgCloseHeight / 2);
+            left: 0 - ($svgCloseWidth / 2);
+          }
+          display: none;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+
+          .closeX {
+            fill-rule: evenodd;
+            clip-rule: evenodd;
+            fill: $white;
+          }
+
+          &.closeXhoverTeal {
+            display: none;
+
+            .closeX {
+              fill: $teal;
+            }
+
+          }
+
+        }
+
+        &:hover, &:focus {
+          // background-color: $headerHoverBlue;
+
+          svg.hamburger {
+            display: none;
+          }
+
+          svg.hamburgerHoverTeal {
+            display: block;
+          }
+
+        }
+
+      }
+
+      &.topLevel {
+
+        div.tlWrap {
+
+          ul.topLevel {
+            display: inline-block;
+          }
+
+          a.btnToggleMenu {
+
+            svg.hamburger {
+              display: none;
+            }
+
+            svg.closeX {
+              display: block;
+            }
+
+            svg.closeXhoverTeal {
+              display: none;
+            }
+
+            &:hover, &:focus {
+
+              svg.closeX {
+                display: none;
+              }
+
+              svg.closeXhoverTeal {
+                display: block;
+              }
+
+            }
+
+          }
+
+        }
+
+        // start of first level .prodServ
+
+        &.prodServ {
+
+          div.tlWrap {
+
+            ul.topLevel {
+
+              li.tl {
+
+                a {
+
+                  span.text {
+
+                    svg.chevronRightBold {
+                      display: none;
+                    }
+
+                  }
+
+                  svg.divot {
+                    display: none;
+                  }
+
+                }
+
+                &.prodServ {
+
+                  a {
+                    @include avBlack;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      @include avMed;
+                      color: $teal;
+                      // background-color: $black;
+                    }
+
+                    span.text {
+
+                      svg.chevronDown {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUp {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUpHoverTeal {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: inline-block;
+                        }
+
+                      }
+
+                      svg.chevronRight {
+                        display: none;
+                      }
+
+                      svg.chevronRightBold {
+                        display: inline-block;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;  
+                        }
+
+                      }
+
+                      svg.chevronRightBoldHoverTeal {
+                        display: none;
+                      }
+
+                    }
+
+                    svg.divot {
+                      display: block;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        display: none;
+                      }
+
+                    }
+
+                    &:hover, &:focus {
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;  
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                    &:active {
+                      color: $white;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        color: $teal;
+                      }
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                  ul.secondLevel {
+                    display: block;
+
+                    li.sl {
+
+                      a {
+                        @include avMed;
+                        color: $white;
+
+                        span.text {
+
+                          svg.chevronRight {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightHoverTeal {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: none;
+                          }
+
+                        }
+
+                        &:hover, &:focus {
+                          color: $teal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            color: $white;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;
+                              }
+
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                        &:active {
+                          color: $white;
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: inline-block;
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of first .prodServ
+
+        // start of first level .partDev
+
+        &.partDev {
+
+          div.tlWrap {
+
+            ul.topLevel {
+
+              li.tl {
+
+                a {
+
+                  span.text {
+
+                    svg.chevronRightBold {
+                      display: none;
+                    }
+
+                  }
+
+                  svg.divot {
+                    display: none;
+                  }
+
+                }
+
+                &.partDev {
+
+                  a {
+                    @include avBlack;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      @include avMed;
+                      color: $teal;
+                      // background-color: $black;
+                    }
+
+                    span.text {
+
+                      svg.chevronDown {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUp {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUpHoverTeal {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: inline-block;
+                        }
+
+                      }
+
+                      svg.chevronRight {
+                        display: none;
+                      }
+
+                      svg.chevronRightBold {
+                        display: inline-block;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;  
+                        }
+
+                      }
+
+                      svg.chevronRightBoldHoverTeal {
+                        display: none;
+                      }
+
+                    }
+
+                    svg.divot {
+                      display: block;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        display: none;
+                      }
+
+                    }
+
+                    &:hover, &:focus {
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;  
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                    &:active {
+                      color: $white;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        color: $teal;
+                      }
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                  ul.secondLevel {
+                    display: block;
+
+                    li.sl {
+
+                      a {
+                        @include avMed;
+                        color: $white;
+
+                        span.text {
+
+                          svg.chevronRight {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightHoverTeal {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: none;
+                          }
+
+                        }
+
+                        &:hover, &:focus {
+                          color: $teal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            color: $white;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;
+                              }
+
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                        &:active {
+                          color: $white;
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: inline-block;
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of first .partDev
+
+        // start of first level .login
+
+        &.login {
+
+          div.tlWrap {
+
+            ul.topLevel {
+
+              li.tl {
+
+                a {
+
+                  span.text {
+
+                    svg.chevronRightBold {
+                      display: none;
+                    }
+
+                  }
+
+                  svg.divot {
+                    display: none;
+                  }
+
+                }
+
+                &.login {
+
+                  div.loginWrapper {
+
+                    a.btnLogin {
+                      @include avBlack;
+
+                      /*
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        @include avMed;
+                        color: $teal;
+                        // background-color: $black;
+                      }
+
+                      */
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: none;
+                        }
+
+                        svg.chevronRightBold {
+                          display: inline-block;
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: block;
+                      }
+
+                      &:hover, &:focus {
+
+                        span.text {
+
+                          svg.padlockIcon {
+                            display: none;
+                          }
+
+                          svg.padlockIconHoverTeal {
+                            display: block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;  
+                            }
+
+                          }
+
+                          svg.chevronRightBold {
+                            display: none;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: inline-block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;  
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                      &:active {
+                        color: $white;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          color: $teal;
+                        }
+
+                        span.text {
+
+                          svg.padlockIcon {
+                            display: block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;
+                            }
+
+                          }
+
+                          svg.padlockIconHoverTeal {
+                            display: none;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: block;
+                            }
+
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;
+                            }
+
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of first level .login
+
+        // start of second level prodServPayTerm
+
+        &.prodServPayTerm {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServPayTerm {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServPayTerm
+
+        // start of second level prodServEcomSol
+
+        &.prodServEcomSol {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServEcomSol {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServEcomSol
+
+        // start of second level prodServBusManTools
+
+        &.prodServBusManTools {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServBusManTools {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServBusManTools
+
+        // start of second level prodServIntSol
+
+        &.prodServIntSol {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServIntSol {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServIntSol
+
+        // start of second level partDevStratPart
+
+        &.partDevStratPart {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevStratPart {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevStratPart
+
+        // start of second level partDevAlliPart
+
+        &.partDevAlliPart {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevAlliPart {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevAlliPart
+
+        // start of second level partDevTechPart
+
+        &.partDevTechPart {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevTechPart {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevTechPart
+
+        // start of second level partDevMonDevPort
+
+        &.partDevMonDevPort {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevMonDevPort {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevMonDevPort
+
+      }
+
+    }
+
+  }
+
+}
+
+/* Header styles end */
