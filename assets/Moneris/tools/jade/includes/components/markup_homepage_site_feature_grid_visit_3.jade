@@ -1,0 +1,19 @@
+div(class="visit-3")
+  div(class="homepage_site_feature_grid")
+    ul(class="list-unstyled")
+      - for (var i = 0; i < htcTiles.length; i++)
+        - if (i == 0)
+          li(class="testimonial col-xs-12 col-sm-4")
+            div(class="padded")
+              div(class="contentWrapper")
+                div(class="image")
+                  img(src="/assets/Moneris/images/static/placeholder_homepage_site_feature_grid_testimonial.jpg", alt=testAlt)
+                h3= testName
+                p(class="store")= testStore
+                p(class="quote")= testQuote
+                a(href="#", title=testCta, class="cta") #{testCta}&nbsp;<span class="icon-chevron_right_bold"></span>
+        - else if (i !== 3)
+          li(class=htcTiles[i].class + " col-xs-12 col-sm-4")
+            a(href=htcTiles[i].href, title!=htcTiles[i].title)
+              strong= htcTiles[i].titleTop
+                span(class="text") #{htcTiles[i].titleBottom}&nbsp;<span class="icon-chevron_right_bold"></span>

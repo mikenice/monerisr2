@@ -1,0 +1,2586 @@
+header {
+
+  div.innerCont {
+
+    nav.globalNav {      
+
+      &.topLevel {       
+
+       // start of first level .prodServ
+
+        &.prodServ {
+
+          div.tlWrap {
+
+            ul.topLevel {
+
+              li.tl {
+
+                a {
+
+                  span.text {
+
+                    svg.chevronRightBold {
+                      display: none;
+                    }
+
+                  }
+
+                  svg.divot {
+                    display: none;
+                  }
+
+                }
+
+                &.prodServ {
+
+                  a {
+                    @include avBlack;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      @include avMed;
+                      color: $teal;
+                      // background-color: $black;
+                    }
+
+                    span.text {
+
+                      svg.chevronDown {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUp {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUpHoverTeal {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: inline-block;
+                        }
+
+                      }
+
+                      svg.chevronRight {
+                        display: none;
+                      }
+
+                      svg.chevronRightBold {
+                        display: inline-block;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;  
+                        }
+
+                      }
+
+                      svg.chevronRightBoldHoverTeal {
+                        display: none;
+                      }
+
+                    }
+
+                    svg.divot {
+                      display: block;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        display: none;
+                      }
+
+                    }
+
+                    &:hover, &:focus {
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;  
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                    &:active {
+                      color: $white;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        color: $teal;
+                      }
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                  ul.secondLevel {
+                    display: block;
+
+                    li.sl {
+
+                      a {
+                        @include avMed;
+                        color: $white;
+
+                        span.text {
+
+                          svg.chevronRight {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightHoverTeal {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: none;
+                          }
+
+                        }
+
+                        &:hover, &:focus {
+                          color: $teal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            color: $white;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;
+                              }
+
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                        &:active {
+                          color: $white;
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: inline-block;
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of first .prodServ
+
+        // start of first level .partDev
+
+        &.partDev {
+
+          div.tlWrap {
+
+            ul.topLevel {
+
+              li.tl {
+
+                a {
+
+                  span.text {
+
+                    svg.chevronRightBold {
+                      display: none;
+                    }
+
+                  }
+
+                  svg.divot {
+                    display: none;
+                  }
+
+                }
+
+                &.partDev {
+
+                  a {
+                    @include avBlack;
+
+                    @media #{scrMinWidth($screen-sm-min)} {
+                      @include avMed;
+                      color: $teal;
+                      // background-color: $black;
+                    }
+
+                    span.text {
+
+                      svg.chevronDown {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUp {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.chevronUpHoverTeal {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: inline-block;
+                        }
+
+                      }
+
+                      svg.chevronRight {
+                        display: none;
+                      }
+
+                      svg.chevronRightBold {
+                        display: inline-block;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          display: none;  
+                        }
+
+                      }
+
+                      svg.chevronRightBoldHoverTeal {
+                        display: none;
+                      }
+
+                    }
+
+                    svg.divot {
+                      display: block;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        display: none;
+                      }
+
+                    }
+
+                    &:hover, &:focus {
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;  
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                    &:active {
+                      color: $white;
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        color: $teal;
+                      }
+
+                      span.text {
+
+                        svg.chevronRightBold {
+                          display: inline-block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                  ul.secondLevel {
+                    display: block;
+
+                    li.sl {
+
+                      a {
+                        @include avMed;
+                        color: $white;
+
+                        span.text {
+
+                          svg.chevronRight {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightHoverTeal {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: none;
+                          }
+
+                        }
+
+                        &:hover, &:focus {
+                          color: $teal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            color: $white;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;
+                              }
+
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                        &:active {
+                          color: $white;
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: inline-block;
+                            }
+
+                            svg.chevronRightHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of first .partDev
+
+        // start of first level .login
+
+        &.login {
+
+          div.tlWrap {
+
+            ul.topLevel {
+
+              li.tl {
+
+                a {
+
+                  span.text {
+
+                    svg.chevronRightBold {
+                      display: none;
+                    }
+
+                  }
+
+                  svg.divot {
+                    display: none;
+                  }
+
+                }
+
+                &.login {
+
+                  div.loginWrapper {
+
+                    a.btnLogin {
+                      @include avBlack;
+
+                      /*
+
+                      @media #{scrMinWidth($screen-sm-min)} {
+                        @include avMed;
+                        color: $teal;
+                        // background-color: $black;
+                      }
+
+                      */
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: none;
+                        }
+
+                        svg.chevronRightBold {
+                          display: inline-block;
+                        }
+
+                        svg.chevronRightBoldHoverTeal {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: block;
+                      }
+
+                      &:hover, &:focus {
+
+                        span.text {
+
+                          svg.padlockIcon {
+                            display: none;
+                          }
+
+                          svg.padlockIconHoverTeal {
+                            display: block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;  
+                            }
+
+                          }
+
+                          svg.chevronRightBold {
+                            display: none;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: inline-block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;  
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                      &:active {
+                        color: $white;
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          color: $teal;
+                        }
+
+                        span.text {
+
+                          svg.padlockIcon {
+                            display: block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;
+                            }
+
+                          }
+
+                          svg.padlockIconHoverTeal {
+                            display: none;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: block;
+                            }
+
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              display: none;
+                            }
+
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of first level .login
+
+        // start of second level prodServPayTerm
+
+        &.prodServPayTerm {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServPayTerm {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServPayTerm
+
+        // start of second level prodServEcomSol
+
+        &.prodServEcomSol {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServEcomSol {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServEcomSol
+
+        // start of second level prodServBusManTools
+
+        &.prodServBusManTools {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServBusManTools {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServBusManTools
+
+        // start of second level prodServIntSol
+
+        &.prodServIntSol {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.prodServ {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.prodServIntSol {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level prodServIntSol
+
+        // start of second level partDevStratPart
+
+        &.partDevStratPart {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevStratPart {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevStratPart
+
+        // start of second level partDevAlliPart
+
+        &.partDevAlliPart {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevAlliPart {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevAlliPart
+
+        // start of second level partDevTechPart
+
+        &.partDevTechPart {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevTechPart {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevTechPart
+
+        // start of second level partDevMonDevPort
+
+        &.partDevMonDevPort {
+
+          div.tlWrap {
+
+            ul.topLevel {
+              left: -50%;
+              top: $headerHeight + $backButtonHeight;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: 0;
+                top: 50%;
+              }
+
+              li.partDev {
+
+                ul.secondLevel {
+                  background-color: $headerHoverBlue;
+                  left: 50%;
+
+                  @media #{scrMinWidth($screen-sm-min)} {
+                    left: 0;
+                  }
+
+                  li.sl {
+
+                    a {
+                      @include avMed;
+                      // background-color: $black;
+
+                      span.text {
+
+                        svg.chevronRight {
+                          display: block;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            // display: inline-block;  
+                          }
+
+                        }
+
+                        svg.chevronRightBold {
+                          display: none;
+                        }
+
+                      }
+
+                      svg.divot {
+                        display: none;
+                      }
+
+                      &:hover, &:focus {
+
+                        @media #{scrMinWidth($screen-sm-min)} {
+                          background-color: $darkTeal;
+                        }
+                        
+                      }
+
+                    }
+
+                    &.partDevMonDevPort {
+
+                      a {
+                        @include avBlack;
+                        background-color: transparent;
+
+                        span.text {
+                          text-decoration: underline;
+
+                          svg.chevronRight {
+                            display: none;
+                          }
+
+                          svg.chevronRightBold {
+                            display: inline-block;
+                          }
+
+                          svg.chevronRightBoldHoverTeal {
+                            display: none;
+                          }
+
+                        }
+
+                        svg.divot {
+                          display: block;
+                        }
+
+                        &:hover, &:focus {
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: $darkTeal;
+                          }
+
+                          span.text {
+
+                            svg.chevronRight {
+                              display: none;
+                            }
+
+                            svg.chevronRightBold {
+                              display: none;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: inline-block;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                display: none;  
+                              }
+
+                            }
+
+                          }
+
+                        }
+                        
+                        &:active {
+                          background-color: $darkTeal;
+
+                          @media #{scrMinWidth($screen-sm-min)} {
+                            background-color: transparent;  
+                          }
+
+                          span.text {
+
+                            svg.chevronRightBold {
+                              display: inline-block;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // display: none;  
+                              }
+
+                            }
+
+                            svg.chevronRightBoldHoverTeal {
+                              display: none;
+                            }
+
+                          }
+
+                        }
+
+                      }
+                    
+                      ul.thirdLevel {
+                        display: block;
+
+                        li.thl {
+
+                          a {
+                            @include avMed;
+                            background-color: $thirdLevelBlue;
+
+                            @media #{scrMinWidth($screen-sm-min)} {
+                              background-color: $thirdLevelBlue;
+                            }
+
+                            span.text {
+                              text-decoration: none;
+
+                              svg.chevronRight {
+                                display: inline-block;
+                              }
+
+                              svg.chevronRightHoverTeal {
+                                display: none;
+                              }
+
+                              svg.chevronRightBold {
+                                display: none;
+                              }
+
+                            }
+
+                            &:hover, &:focus {
+                              color: $teal;
+                              // background-color: $black;
+
+                              @media #{scrMinWidth($screen-sm-min)} {
+                                // background-color: $headerHoverBlue;
+                                // background-color: transparent;
+                              }
+
+                              span.text {
+
+                                svg.chevronRight {
+                                  display: none;
+                                }
+
+                                svg.chevronRightHoverTeal {
+                                  display: inline-block;
+                                }
+
+                              }
+
+                            }
+
+                          }
+
+                        }
+
+                      }
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+            a.backButton {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;  
+              }
+
+            }
+
+            div.languageWrapper {
+              left: -10000px;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                left: auto;  
+              }
+
+            }
+
+          }
+
+        }
+
+        // end of second level partDevMonDevPort
+
+      }
+
+    }
+
+  }
+
+}

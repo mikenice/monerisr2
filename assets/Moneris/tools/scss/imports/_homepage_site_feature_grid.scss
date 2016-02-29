@@ -1,0 +1,573 @@
+/* Homepage Site Feature Grid styles begin */
+
+div.homepage_site_feature_grid {
+  max-width: $interfaceMaxWidth;
+  margin: 0 auto;
+
+  $imgHeight: 138px;
+  $imgHeightSm: 275px;
+  $imgHeightMd: 292px;
+  $borderWidthSm: 3px;
+
+  ul {
+    margin: 0;
+    padding-bottom: $grid-gutter-width / 2;
+    @include clearfix;
+
+    @media #{scrMinWidth($screen-sm-min)} {
+      padding-bottom: $borderWidthSm;
+    }
+
+    $liHeightSm: 223px;
+    $liHeightMd: 297px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    li {
+      margin-top: $grid-gutter-width / 2;
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        height: $liHeightSm;
+        margin-top: 0;
+        padding: $borderWidthSm $borderWidthSm 0 0;
+      }
+
+      @media #{scrMinWidth($screen-md-min)} {
+        height: $liHeightMd;
+      }
+
+      div.visit-1 &:nth-child(3n), div.visit-2 &:nth-child(3n) {
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          padding-right: 0;
+        }
+
+      }
+
+      div.visit-3 &:nth-child(2n+3) {
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          padding-right: 0;
+        }
+
+      }
+
+      div.visit-4 &:nth-child(1n+3) {
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          padding-right: 0;
+        }
+
+      }
+
+      $aHeight: 70px;
+      $seconds: 0.25s;
+      $flourish: ease-out;
+
+      a {
+        text-decoration: none;
+        color: $headerHoverBlue;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          height: $liHeightSm - $borderWidthSm;
+          display: block;
+          line-height: $liHeightSm - $borderWidthSm;
+          background: {
+            repeat: no-repeat;
+            position: center;
+            size: auto 100%;
+          }
+          @include transition(background-size $seconds $flourish);
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          height: $liHeightMd - $borderWidthSm;
+          line-height: $liHeightMd - $borderWidthSm;
+        }
+
+        $strWidthSm: 222px;
+        $strWidthSmHover: 244px;
+
+        strong {
+          padding: 15px 0;
+          display: block;
+          font-size: em(9.5px);
+          line-height: em(12.5px);
+          @include avRom;
+          text-align: center;
+          background-color: $tileGrey;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            width: $strWidthSm;
+            margin-left: 0 - ($strWidthSm / 2);
+            padding: 9px 0;
+            display: inline-block;
+            vertical-align: middle;
+            opacity: 0.85;
+            position: relative;
+            left: 50%;
+            @include transition(width $seconds $flourish, margin-left $seconds $flourish, padding $seconds, $flourish, font-size $seconds $flourish);
+          }
+
+          span.text {
+            display: block;
+            font-size: em(11px);
+            @include avBlack;
+            @include transition(font-size $seconds $flourish, color $seconds $flourish);
+
+            span.icon-chevron_right_bold {
+              font-size: em(5px);
+              position: relative;
+              top: -1px;
+            }
+
+          }
+
+        }
+
+        &:hover, &:focus {
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            background-size: auto 110%;
+          }
+
+          strong {
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              width: $strWidthSmHover;
+              margin-left: 0 - ($strWidthSmHover / 2);
+              padding: 10px 0;
+              font-size: em(11px);
+            }
+
+            span.text {
+              color: $teal;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                font-size: em(11px);
+              }
+              
+            }
+
+          }
+
+        }
+
+      }
+
+      @for $i from 0 through 5 {
+        
+        &.tile-#{$i} {
+
+          a {
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              background-image: image-url("static/homepage_site_feature_grid_bg-#{$i}.jpg");
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      &.testimonial {
+        padding: {
+          right: 0;
+          left: 0;
+        }
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          height: $liHeightSm * 2;
+          padding: $borderWidthSm $borderWidthSm 0 0;
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          height: $liHeightMd * 2;
+        }
+
+        div.padded {
+          text-align: center;
+          background-color: $tileTestimonialBg;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            height: ($liHeightSm * 2) - $borderWidthSm;
+            line-height: ($liHeightSm * 2) - $borderWidthSm;
+          }
+
+          @media #{scrMinWidth($screen-md-min)} {
+            height: ($liHeightMd * 2) - $borderWidthSm;
+            line-height: ($liHeightMd * 2) - $borderWidthSm;
+          }
+
+          div.contentWrapper {
+            width: 240px;
+            margin: 0 auto;
+            padding: 40px 0 65px;
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              width: 220px;
+              padding: 0;
+              display: inline-block;
+              vertical-align: middle;
+              line-height: em(10px);
+            }
+
+            $imgWidth: image-width("static/placeholder_homepage_site_feature_grid_testimonial.jpg") / 2;
+            $imgWidthSm: 160px;
+
+            div.image {
+              width: $imgWidth;
+              height: $imgWidth;
+              margin: 0 auto;
+              overflow: hidden;
+              border-radius: 50%;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                width: $imgWidthSm;
+                height: $imgWidthSm;
+              }
+
+              img {
+                width: $imgWidth;
+                height: $imgWidth;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  width: $imgWidthSm;
+                  height: $imgWidthSm;
+                }
+
+              }
+
+            }
+
+            h3 {
+              margin: 0;
+              padding: 38px 0 0;
+              font-size: em(22px);
+              line-height: em(10.75px);
+              @include avMed;
+              color: $orange;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                padding-top: 28px;
+                font-size: em(14px);
+              }
+
+            }
+
+            p.store {
+              margin: 0;
+              padding: 2px 0 0;
+              font-size: em(12.5px);
+              line-height: em(10.75px);
+              @include avRom;
+              color: $textGreyMed;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                padding-top: 6px;
+                font-size: em(11px);
+              }
+
+            }
+
+            p.quote {
+              margin: 0;
+              padding: 30px 0 0;
+              font-size: em(16px);
+              line-height: em(13px);
+              @include avRom;
+              color: $headerHoverBlue;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                padding-top: 16px;
+                font-size: em(14.25px);
+                line-height: em(12.5px);
+              }
+
+            }
+
+            a.cta {
+              height: auto;
+              margin: 0;
+              padding: 40px 0 0;
+              display: inline-block;
+              font-size: em(10.25px);
+              line-height: em(10px);
+              letter-spacing: em(0.4px);
+              @include avBlack;
+              color: $headerHoverBlue;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                padding-top: 30px;
+                font-size: em(10px);
+              }
+
+              span.icon-chevron_right_bold {
+                font-size: em(6px);
+                position: relative;
+                top: -1px;
+              }
+
+              &:hover, &:focus {
+                text-decoration: underline;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      &.insight {
+        padding: {
+          right: 0;
+          left: 0;
+        }
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          // height: $liHeightSm * 2;
+          // padding: $borderWidthSm $borderWidthSm 0 0;
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          // height: $liHeightMd * 2;
+        }
+
+        div.padded {
+          background-color: $teal;
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            height: $liHeightSm - $borderWidthSm;
+            line-height: $liHeightSm - $borderWidthSm;
+            text-align: center;
+          }
+
+          @media #{scrMinWidth($screen-md-min)} {
+            height: $liHeightMd - $borderWidthSm;
+            line-height: $liHeightMd - $borderWidthSm;
+          }
+
+          $cwMargSm: 30px;
+          $cwWidthSm: 512px - ($cwMargSm * 2);
+
+          div.contentWrapper {
+            width: 320px - ($grid-gutter-width / 2);
+            margin: 0 auto;
+            padding: 36px 0 46px;
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              width: $cwWidthSm;
+              margin: 0 auto;
+              padding: 0;
+              display: inline-block;
+              vertical-align: middle;
+              line-height: em(10px);
+              @include clearfix;
+            }
+
+            $imgWidth: image-width("static/placeholder_homepage_site_feature_grid_insight.jpg") / 2;
+            $imgWidthSm: 148px;
+
+            div.image {
+              width: $imgWidth;
+              height: $imgWidth;
+              margin: 0 auto;
+              overflow: hidden;
+              border-radius: 50%;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                width: $imgWidthSm;
+                height: $imgWidthSm;
+                margin-top: 8px;
+                float: left;
+              }
+
+              img {
+                width: $imgWidth;
+                height: $imgWidth;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  width: $imgWidthSm;
+                  height: $imgWidthSm;
+                }
+
+              }
+
+            }
+
+            div.copy {
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                width: $cwWidthSm - ($imgWidthSm + $cwMargSm);
+                margin-left: $cwMargSm;
+                float: left;
+                text-align: left;
+              }
+
+              h4.pill {
+                height: 25px;
+                margin: 30px 0 0;
+                padding: 0 13px;
+                display: inline-block;
+                font-size: em(10px);
+                line-height: 25px;
+                @include avBlack;
+                border-radius: 5px;
+                background-color: $yellow;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  margin-top: 0;
+                }
+
+                span {
+                  display: inline-block;
+                  vertical-align: middle;
+                  line-height: em(10px);
+                  position: relative;
+                  top: 1px;
+                }
+
+              }
+
+              h3.title {
+                margin: 0;
+                padding: 16px 0 0;
+                font-size: em(15.5px);
+                line-height: em(10.75px);
+                @include avRom;
+                color: $white;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  padding-top: 15px;
+                  font-size: em(14.5px);
+                }
+
+              }
+
+              p.article {
+                margin: 0;
+                padding: 10px 0 0;
+                font-size: em(11px);
+                line-height: em(13.5px);
+                color: $white;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  padding-top: 6px;
+                  font-size: em(10px);
+                  line-height: em(13.5px);
+                }
+
+              }
+
+              a.cta {
+                height: auto;
+                margin: 0;
+                padding: 26px 0 0;
+                display: inline-block;
+                font-size: em(10.25px);
+                line-height: em(10px);
+                letter-spacing: em(0.4px);
+                @include avBlack;
+                color: $white;
+
+                @media #{scrMinWidth($screen-sm-min)} {
+                  padding-top: 20px;
+                  font-size: em(10px);
+                }
+
+                span.icon-chevron_right_bold {
+                  font-size: em(6px);
+                  position: relative;
+                  top: -1px;
+                }
+
+                &:hover, &:focus {
+                  text-decoration: underline;
+                }
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+/* Homepage Site Feature Grid styles end */

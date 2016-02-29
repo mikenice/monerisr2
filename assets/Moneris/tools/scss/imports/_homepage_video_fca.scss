@@ -1,0 +1,72 @@
+/* Homepage Featured Content styles begin */
+
+div.homepage_video_fca {
+  position: relative;
+
+  $fcwWidth: 1096px;
+  $fcwHeight: 510px;
+
+  $fcwWidthSm: 1900px;
+  $fcwHeightSm: 690px;
+
+  $fcwWidthMd: 1440px;
+  $fcwHeightMd: 523px;
+
+  div.fcWrapper {
+    height: $fcwHeight;
+    overflow: hidden;
+    position: relative;
+
+    div.textLinks {
+      margin: 0 $grid-gutter-width / 2;
+      height: $fcwHeight;
+      text-align: center;
+      color: $headerHoverBlue;
+      position: relative;
+      z-index: 2;
+
+      h1 {
+        margin: 0 auto;
+        padding-top: $headerHeight + 185;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          padding-top: $headerHeightSm + 198;
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          padding-top: $headerHeightMd + 180;
+        }
+
+      }
+
+      a.bigTealCta {
+        width: 178px;
+        margin: 30px auto 0;
+      }
+
+    }
+
+    img {
+      height: $fcwHeight;
+      margin-left: 0 - ($mainMaxWidth / 2);
+      position: absolute;
+      left: 50%;
+      top: 0;
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        // height: $fcwHeightSm;
+        // margin-left: 0 - ($fcwWidthSm / 2);
+      }
+
+      @media #{scrMinWidth($screen-md-min)} {
+        // height: $fcwHeightMd;
+        // margin-left: 0 - ($fcwWidthMd / 2);
+      }
+
+    }
+
+  }
+
+}
+
+/* Homepage Featured Content styles end */

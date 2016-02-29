@@ -1,0 +1,294 @@
+/* Base styles begin */
+
+$headerHeight: 50px;
+$headerHeightSm: 50px;
+$headerHeightMd: 68px;
+
+$btnsRightMarg: 25px;
+$btnsRightMargSm: ($grid-gutter-width / 2) * 3;
+
+$footerHeight: 712px;
+$footerHeightSm: 218px;
+$footerHeightMd: 258px;
+
+$innerContMaxWidthMd: 1030px;
+$mainMaxWidth: 1920px;
+$interfaceMaxWidth: 1440px;
+
+$baseFontSize: 10px;
+$basePadding: 15px;
+
+$homeLogoW: 32px;
+$homeLogoH: 28px;
+$homeLogoWsm: 86px;
+$homeLogoHsm: 28px;
+$homeLogoWmd: 120px;
+$homeLogoHmd: 40px;
+
+body {
+  // font-size: 100%; NOTE: Applied in Bootstrap.
+  line-height: 1em;
+  @include sansLight;
+  color: $black;
+  background-color: $white;
+  -webkit-text-size-adjust: none;
+
+  a {
+    color: $teal;
+    text-decoration: underline;
+
+    /*
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    */
+
+  }
+
+  a.bigTealCta {
+    padding: 14px $grid-gutter-width / 2;
+    display: block;
+    font-size: em(10px);
+    line-height: em(11px);
+    @include avBlack;
+    text: {
+      align: center;
+      decoration: none;
+    }
+    letter-spacing: em(1.5px);
+    color: $white;
+    border-radius: 4px;
+    background-color: $teal;
+
+    span.text {
+      position: relative;
+      top: 1px;
+
+      span.icon-chevron_right_bold {
+        font-size: em(6px);
+        position: relative;
+        top: -1px;
+      }
+
+    }
+
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  p {
+    font-size: em(11.5px);
+    line-height: em(12px);
+
+    &.fcaSub {
+      margin: 5px 0 0;
+      font-size: em(11px);
+      line-height: em(13.5px);
+      @include avRom;
+      text-align: center;
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        margin-top: 0;
+      }
+
+    }
+
+  }
+
+  h1 {
+    font-size: em(24px);
+    line-height: em(10.75px);
+    @include avMed;
+  }
+
+  div.section {
+    height: 100%;
+    overflow: visible;
+
+    div.contentHeader {
+      position: relative;
+      // height: 20000px; ALERT: Temporary value until content is added.
+
+      /*
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        height: 15000px;
+      }
+
+      @media #{scrMinWidth($screen-md-min)} {
+        height: 10000px;
+      }
+
+      @media #{scrMinWidth($screen-lg-min)} {
+        height: 5000px;
+      }
+
+      */
+
+      /* Top/left Moneris logo styles begin */
+
+      a.btnHomeLogo {
+        width: $homeLogoW;
+        height: $homeLogoH;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        left: $grid-gutter-width / 2;
+        top: ($headerHeight / 2) - ($homeLogoH / 2);
+        z-index: 18;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          width: $homeLogoWsm;
+          height: $homeLogoHsm;
+          left: $btnsRightMargSm;
+          top: ($headerHeightSm / 2) - ($homeLogoHsm / 2);
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          width: $homeLogoWmd;
+          height: $homeLogoHmd;
+          margin-left: 0 - (($screen-md-min - $grid-gutter-width) / 2);
+          left: 50%;
+          top: ($headerHeightMd / 2) - ($homeLogoHmd / 2);
+        }
+
+        span {
+          display: none;
+        }
+
+        svg.symbol {
+          width: $homeLogoW;
+          height: $homeLogoH;
+
+          .moneris_symbol {
+            fill: $white;
+          }
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            display: none;
+          }
+
+          &.symbolHover {
+            display: none;
+
+            .moneris_symbol {
+              fill: $teal;
+            }
+
+          }
+
+        }
+
+        svg.fullLogo {
+          display: none;
+
+          .logo {
+            fill: $white;
+          }
+
+          @media #{scrMinWidth($screen-sm-min)} {
+            width: $homeLogoWsm;
+            height: $homeLogoHsm;
+            display: block;
+          }
+
+          @media #{scrMinWidth($screen-md-min)} {
+            width: $homeLogoWmd;
+            height: $homeLogoHmd;
+          }
+
+          &.fullLogoHover {
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              display: none;
+            }
+
+            .logo {
+              fill: $teal;
+            }
+
+          }
+
+        }
+
+        &:hover, &:focus {
+
+          svg.symbol {
+            display: none;
+
+            &.symbolHover {
+              display: block;
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: none;
+              }
+
+            }
+
+          }
+
+          svg.fullLogo {
+
+            @media #{scrMinWidth($screen-sm-min)} {
+              display: none;
+            }
+
+            &.fullLogoHover {
+
+              @media #{scrMinWidth($screen-sm-min)} {
+                display: block;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      /* Top/left Moneris logo styles end */
+
+      main.content {
+        max-width: $mainMaxWidth;
+        margin: 0 auto;
+        // padding-top: $headerHeight;
+        display: block;
+
+        @media #{scrMinWidth($screen-sm-min)} {
+          // padding-top: $headerHeightSm;
+        }
+
+        @media #{scrMinWidth($screen-md-min)} {
+          // padding-top: $headerHeightMd;
+        }
+
+        a.bigTealCta {
+          font-size: em(8px);
+        }
+
+      }
+
+      /*
+
+      div#ch-footer {
+        height: $footerHeight;
+      }
+
+      */
+
+    }
+
+  }
+
+}
+
+/* Base styles end */

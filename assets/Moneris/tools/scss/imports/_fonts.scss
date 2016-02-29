@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'avenir_lt_black';
+  src: url('../fonts/avenir_lt/black/2F6CB9_2_0.woff2') format('woff2'),
+       url('../fonts/avenir_lt/black/2F6CB9_2_0.woff') format('woff'),
+       url('../fonts/avenir_lt/black/2F6CB9_2_0.svg#wf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'avenir_lt_medium';
+  src: url('../fonts/avenir_lt/medium/2F6CB9_0_0.woff2') format('woff2'),
+       url('../fonts/avenir_lt/medium/2F6CB9_0_0.woff') format('woff'),
+       url('../fonts/avenir_lt/black/2F6CB9_0_0.svg#wf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'avenir_lt_roman';
+  src: url('../fonts/avenir_lt/roman/2F6CB9_1_0.woff2') format('woff2'),
+       url('../fonts/avenir_lt/roman/2F6CB9_1_0.woff') format('woff'),
+       url('../fonts/avenir_lt/black/2F6CB9_1_0.svg#wf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'the_sans_lp_light';
+  src: url('../fonts/the_sans_lp/light/TheSans_LP_300_Light.woff') format('woff'),
+        url('../fonts/the_sans_lp/light/TheSans_LP_300_Light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'the_sans_lp_plain';
+  src: url('../fonts/the_sans_lp/plain/TheSans_LP_500_Plain.woff') format('woff'),
+        url('../fonts/the_sans_lp/plain/TheSans_LP_500_Plain.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'chevrons';
+  src: url('../fonts/chevrons/icomoon.woff?3wko1c') format('woff'),
+        url('../fonts/chevrons/icomoon.svg?3wko1c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// NOTE: Use the following mixin whenever Avenir Black is used in Photoshop
+
+@mixin avBlack {
+  font: {
+    weight: normal;
+    style: normal;
+    family: avenir_lt_black, sans-serif;
+  }
+}
+
+// NOTE: Use the following mixin whenever Avenir LT 55 Roman Bold is used in Photoshop
+
+@mixin avMed {
+  font: {
+    weight: normal;
+    style: normal;
+    family: avenir_lt_medium, sans-serif;
+  }
+}
+
+// NOTE: Use the following mixin whenever Avenir LT 55 Roman Regular is used in Photoshop
+
+@mixin avRom {
+  font: {
+    weight: normal;
+    style: normal;
+    family: avenir_lt_roman, sans-serif;
+  }
+}
+
+@mixin sansLight {
+  font: {
+    weight: normal;
+    style: normal;
+    family: the_sans_lp_light, sans-serif;
+  }
+}
+
+@mixin sansPlain {
+  font: {
+    weight: normal;
+    style: normal;
+    family: the_sans_lp_plain, sans-serif;
+  }
+}
+
+@mixin chevrons {
+  font: {
+    weight: normal;
+    style: normal;
+    variant: normal;
+    family: 'chevrons' !important;
+  }
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron_right_normal:before {
+    @include chevrons;
+    content: "\e901";
+}
+.icon-chevron_right_bold:before {
+    @include chevrons;
+    content: "\e900";
+}
+.icon-chevron_left_normal:before {
+    @include chevrons;
+    content: "\e902";
+}
+.icon-social_facebook_logo:before {
+    @include chevrons;
+    content: "\e903";
+}
+.icon-social_linkedin_logo:before {
+    @include chevrons;
+    content: "\e904";
+}
+.icon-social_twitter_logo:before {
+    @include chevrons;
+    content: "\e905";
+}
+
+@mixin ss {
+  font: {
+    weight: normal;
+    style: normal;
+    family: sans-serif;
+  }
+}

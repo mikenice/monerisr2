@@ -1,0 +1,40 @@
+// ALERT: Footer HTML starts here 
+footer(class="footer row", id="ftr")
+  div(class="innerCont")
+    div(class="navPhoneNumbersWrap")
+      nav(class="footerNav")
+        ul(class="list-unstyled")
+          each fn in footerNav
+            li(class=fn.class)
+              a(href=fn.href, title=fn.title)= fn.title
+                svg
+                  title= fn.title
+                  desc= fn.desc
+                  use(xlink:href="#icon-chevron_right_skinny")
+      div(class="phoneNumbersWrap")
+        h6= footerH6
+        ul(class="phoneNumbers list-unstyled")
+          each pn in phoneNumbers
+            li
+              h6= pn.text
+              a(href="tel:", title=pn.title, class="bigTealCta")
+                span(class="text") #{pn.title}&nbsp;<span class="icon-chevron_right_bold"></span>
+    //-
+      nav(class="socialNav")
+        ul(class="floatLeft list-unstyled")
+          each nw in socialNav
+            li
+              a(href="#", title=nw.title)
+                span= nw.title
+                svg
+                  title= nw.title
+                  desc= nw.desc
+                  use(xlink:href="#icon-social_" + nw.name)
+    nav(class="socialNav")
+      ul(class="floatLeft list-unstyled")
+        each nw in socialNav
+          li
+            a(href="#", title=nw.title, class="social-button " + nw.name)
+              span(class="text")= nw.title
+              span(class="fa icon-social_" + nw.name + "_logo")
+// ALERT: Footer HTML ends here 

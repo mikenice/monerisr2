@@ -1,0 +1,235 @@
+// Header begins here 
+div(class="headerBackground", id="hdrbckgrnd") &nbsp;
+header(class="header")
+  div(class="innerCont")
+    //-
+      topLevel
+      prodServ
+      ------
+      prodServPayTerm
+      prodServEcomSol
+      prodServBusManTools
+      prodServIntSol
+
+      topLevel
+      partDev
+      ------
+      partDevStratPart
+      partDevAlliPart
+      partDevTechPart
+      partDevMonDevPort
+
+      topLevel
+      login
+    nav(class="globalNav", id="glblnv")
+      div(class="tlWrap")
+        ul(class="topLevel list-unstyled")
+          - for (var i = 0; i < globalNav.length; i++)
+            - if (i == globalNav.length - 1)
+              li(class=globalNav[i].class)
+                div(class="loginWrapper", id="lgnwrppr")
+                  a(href=globalNav[i].href, title=globalNav[i].title, class="btnLogin", id="dd-login", data-target="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false")
+                    span(class="text") #{globalNav[i].title}<span class="chevronRight">&nbsp;<span class="chevron icon-chevron_right_normal"></span><span class="chevron icon-chevron_right_bold"></span></span>
+                      svg(class="padlockIcon")
+                        title= globalNav[i].title
+                        desc= globalNav[i].desc
+                        use(xlink:href="#icon-account_padlock")
+                      svg(class="padlockIcon padlockIconHoverTeal")
+                        title= globalNav[i].title
+                        desc= globalNav[i].desc
+                        use(xlink:href="#icon-account_padlock_hover_teal")
+                      svg(class="chevronDown")
+                        title= globalNav[i].title
+                        desc= globalNav[i].desc
+                        use(xlink:href="#icon-chevron_down_normal")
+                      svg(class="chevronDown chevronDownHoverTeal")
+                        title= globalNav[i].title
+                        desc= globalNav[i].desc
+                        use(xlink:href="#icon-chevron_down_normal_hover_teal")
+                      svg(class="chevronUp")
+                        title= globalNav[i].title
+                        desc= globalNav[i].desc
+                        use(xlink:href="#icon-chevron_up_normal")
+                      svg(class="chevronUp chevronUpHoverTeal")
+                        title= globalNav[i].title
+                        desc= globalNav[i].desc
+                        use(xlink:href="#icon-chevron_up_normal_hover_teal")
+                    svg(class="divot")
+                      title= divot
+                      desc= divotDesc
+                      use(xlink:href="#icon-divot_left")
+                    svg(class="divotOutline")
+                      title= divot
+                      desc= divotDesc
+                      use(xlink:href="#icon-divot_left_outline")
+                  ul(class="dropdown-menu", aria-labelledby="dd-login")
+                    each ldd in loginDropdown
+                      li
+                        a(href=ldd.href, title=ldd.title)
+                          span(class="text") #{ldd.title}&nbsp;<span class="chevron icon-chevron_right_normal"></span>
+            - else if (i == globalNav.length - 3 || i == globalNav.length - 4)
+              li(class=globalNav[i].class)
+                a(href=globalNav[i].href, title=globalNav[i].title)
+                  span(class="text")= globalNav[i].title
+            - else
+              li(class=globalNav[i].class)
+                a(href=globalNav[i].href, title=globalNav[i].title)
+                  span(class="text") #{globalNav[i].title}<span class="chevronRight">&nbsp;<span class="chevron icon-chevron_right_normal"></span><span class="chevron icon-chevron_right_bold"></span></span>
+                    svg(class="chevronDown")
+                      title= globalNav[i].title
+                      desc= globalNav[i].desc
+                      use(xlink:href="#icon-chevron_down_normal")
+                    svg(class="chevronDown chevronDownHoverTeal")
+                      title= globalNav[i].title
+                      desc= globalNav[i].desc
+                      use(xlink:href="#icon-chevron_down_normal_hover_teal")
+                    svg(class="chevronUp")
+                      title= globalNav[i].title
+                      desc= globalNav[i].desc
+                      use(xlink:href="#icon-chevron_up_normal")
+                    svg(class="chevronUp chevronUpHoverTeal")
+                      title= globalNav[i].title
+                      desc= globalNav[i].desc
+                      use(xlink:href="#icon-chevron_up_normal_hover_teal")
+                  svg(class="divot")
+                    title= divot
+                    desc= divotDesc
+                    use(xlink:href="#icon-divot_left")
+                  svg(class="divotOutline")
+                    title= divot
+                    desc= divotDesc
+                    use(xlink:href="#icon-divot_left_outline")
+                ul(class="secondLevel list-unstyled")
+                  - for (var j = 0; j < globalNav[i].secondLevel.length; j++)
+                    li(class=globalNav[i].secondLevel[j].class)
+                      - if (globalNav[i].secondLevel[j].thirdLevel != undefined)
+                        a(href=globalNav[i].secondLevel[j].href, title=globalNav[i].secondLevel[j].title)
+                          span(class="text") #{globalNav[i].secondLevel[j].title}&nbsp;<span class="chevron icon-chevron_right_normal"></span><span class="chevron icon-chevron_right_bold"></span>
+                          svg(class="divot")
+                            title= divot
+                            desc= divotDesc
+                            use(xlink:href="#icon-divot_left")
+                        ul(class="thirdLevel list-unstyled")
+                          - for (var k = 0; k < globalNav[i].secondLevel[j].thirdLevel.length; k++)
+                            li(class=globalNav[i].secondLevel[j].thirdLevel[k].class)
+                              a(href=globalNav[i].secondLevel[j].thirdLevel[k].href, title=globalNav[i].secondLevel[j].thirdLevel[k].title)
+                                span(class="text") #{globalNav[i].secondLevel[j].thirdLevel[k].title}
+                      - else
+                        a(href=globalNav[i].secondLevel[j].href, title=globalNav[i].secondLevel[j].title)
+                          span(class="text") #{globalNav[i].secondLevel[j].title}
+        a(href="#", title=back, class="backButton", id="bckbttn")
+          span(class="text") <span class="chevron icon-chevron_left_normal"></span>&nbsp;#{back}
+        div(class="languageWrapper", id="lnggwrppr")
+          a(href="#", title=btnLanguage, class="btnLanguage can", id="dd-language", data-target="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false")
+            span(class="text")= btnLanguage
+              svg(class="flag")
+                title= btnLanguage
+                desc= btnLanguageDesc
+                use(xlink:href="#icon-flag_canada", class="can")
+                use(xlink:href="#icon-flag_usa", class="usa")
+              svg(class="chevronDown")
+                title= btnLanguage
+                desc= btnLanguageDesc
+                use(xlink:href="#icon-chevron_down_normal")
+              svg(class="chevronDown chevronDownHoverTeal")
+                title= btnLanguage
+                desc= btnLanguageDesc
+                use(xlink:href="#icon-chevron_down_normal_hover_teal")
+              svg(class="chevronUp")
+                title= btnLanguage
+                desc= btnLanguageDesc
+                use(xlink:href="#icon-chevron_up_normal")
+              svg(class="chevronUp chevronUpHoverTeal")
+                title= btnLanguage
+                desc= btnLanguageDesc
+                use(xlink:href="#icon-chevron_up_normal_hover_teal")
+          ul(class="dropdown-menu dropdown-menu-right", aria-labelledby="dd-language")
+            each ldd in languageDropdown
+              li(class=ldd.class)
+                - if (ldd.class == "US")
+                  a(href="http://www.monerisusa.com/", title=ldd.title, target="_blank")
+                    span(class="text") #{ldd.title}
+                      svg(class="flag")
+                        title= ldd.title
+                        desc= ldd.desc
+                        use(xlink:href="#icon-flag_" + ldd.flag)
+                      svg(class="arrow")
+                        title= ldd.title
+                        desc= ldd.desc
+                        use(xlink:href="#icon-take_to_new_website_arrow")
+                      svg(class="arrow arrowHoverTeal")
+                        title= ldd.title
+                        desc= ldd.desc
+                        use(xlink:href="#icon-take_to_new_website_arrow_hover_teal")
+                - else
+                  a(href=ldd.href, title=ldd.title)
+                    span(class="text") #{ldd.title}<span class="chevronRight">&nbsp;<span class="chevron icon-chevron_right_bold"></span></span>
+                      svg(class="flag")
+                        title= ldd.title
+                        desc= ldd.desc
+                        use(xlink:href="#icon-flag_" + ldd.flag)
+                      svg(class="arrow")
+                        title= ldd.title
+                        desc= ldd.desc
+                        use(xlink:href="#icon-take_to_new_website_arrow")
+                      svg(class="arrow arrowHoverTeal")
+                        title= ldd.title
+                        desc= ldd.desc
+                        use(xlink:href="#icon-take_to_new_website_arrow_hover_teal")
+        a(href="#", title=btnPhone, class="btnPhone")
+          span= btnPhone
+          svg(class="phone")
+            title= btnPhone
+            desc= btnPhoneDesc
+            use(xlink:href="#icon-phone_white")
+          svg(class="phone phoneHoverTeal")
+            title= btnPhone
+            desc= btnPhoneDesc
+            use(xlink:href="#icon-phone_hover_teal")
+        div(class="searchWrapper", id="srchwrppr")
+          a(href="#", title=btnSearch, class="btnSearch", id="dd-search")
+            span= btnSearch
+            svg(class="magnifyingGlass")
+              title= btnSearch
+              desc= btnSearchDesc
+              use(xlink:href="#icon-search_magnifying_glass")
+            svg(class="magnifyingGlass magnifyingGlassHoverTeal")
+              title= btnSearch
+              desc= btnSearchDesc
+              use(xlink:href="#icon-search_magnifying_glass_hover_teal")
+            svg(class="closeX")
+              title= btnSearch
+              desc= btnSearchDescAlt
+              use(xlink:href="#icon-close_x")
+            svg(class="closeX closeXhoverTeal")
+              title= btnSearch
+              desc= btnSearchDescAlt
+              use(xlink:href="#icon-close_x_hover_teal")
+        div(class="searchOverlay", id="srchvrl")
+          div(class="searchForm")
+            input(type="search", name="searchField", id="searchField", placeholder=btnSearch)
+            a(href="#", title=btnSearch, class="btnSubmitSearch", id="sbmtsrch")
+              span= btnSearch
+              svg
+                use(xlink:href="#icon-search_magnifying_glass")
+          a(href="#", title=btnCloseSearchField, class="btnCloseSearchField", id="clssrchfld")
+            span= btnCloseSearchField
+        a(href="#", title=btnToggleMenu, class="btnToggleMenu", id="tgglmn")
+          span= btnToggleMenu
+          svg(class="hamburger")
+            title= btnToggleMenu
+            desc= btnToggleMenuDesc
+            use(xlink:href="#icon-menu_hamburger")
+          svg(class="hamburger hamburgerHoverTeal")
+            title= btnToggleMenu
+            desc= btnToggleMenuDesc
+            use(xlink:href="#icon-menu_hamburger_hover_teal")
+          svg(class="closeX")
+            title= btnToggleMenu
+            desc= btnToggleMenuDesc
+            use(xlink:href="#icon-close_x")
+          svg(class="closeX closeXhoverTeal")
+            title= btnToggleMenu
+            desc= btnToggleMenuDesc
+            use(xlink:href="#icon-close_x_hover_teal")
+// Header ends here 

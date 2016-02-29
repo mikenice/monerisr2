@@ -1,0 +1,41 @@
+@function em($px, $base: $baseFontSize) {
+  @return ($px / $base) * 1em;
+}
+
+@mixin bgCommonStyles {
+  repeat: no-repeat;
+  position: left top;
+  size: 100%;
+}
+
+@mixin absPosCenter($margT, $margL) {
+  margin: {
+    top: 0 - $margT;
+    right: 0;
+    bottom: 0;
+    left: 0 - $margL;
+  }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+@mixin bord1px($colour) {
+  border: 1px solid $colour;
+}
+
+@mixin oriMq($orientation) {
+
+  @media screen and (orientation: $orientation) {
+    @content;
+  }
+  
+}
+
+@function scrMinWidth($minWidth) {
+  @return "all and (min-width: " + $minWidth + ")";
+}
+
+@function scrMaxWidth($maxWidth) {
+  @return "all and (max-width: " + $maxWidth + ")";
+}

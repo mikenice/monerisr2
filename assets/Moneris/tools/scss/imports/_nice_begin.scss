@@ -1,0 +1,131 @@
+/* Some beginning utility CSS styles that I use frequently to speed up development. */
+
+body {
+	// font-size: 100%;	NOTE: Applied in Bootstrap.
+	// line-height: 1em;
+}
+a.img {
+	display: block;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: relative;
+}
+a div.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+a.img span, a div.left span {
+	display: none;
+}
+a.img em {
+	font-style: normal;
+	position: absolute;
+}
+
+div.colFl, ul.floatLeft li, img.floatLeft {
+	float: left;
+}
+div.colFr, ul.floatRight li, img.floatRight {
+	float: right;
+}
+ul.pagLeft li {
+	float: left;
+	line-height: 1em;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+ul.pagRight li {
+	float: right;
+	line-height: 1em;
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+
+.pagCenterWrap {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	float: left;
+}
+.pagCenterWrap ul {
+	margin: 0 auto;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+.pagCenterWrap ul li {
+	position: relative;
+	right: 50%;
+}
+
+form, form fieldset {
+	overflow: hidden;
+}
+form fieldset legend {
+	display: none;
+}
+form fieldset div.textField {
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: relative;
+}
+form fieldset div.textField input {
+	border-width: 0;
+	background: {
+		image: image-url("static/transparent.png");
+		repeat: repeat;
+	}
+	position: absolute;
+}
+
+form.quickSearch fieldset {
+	position: relative;
+}
+form.quickSearch fieldset div.textField {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+form.quickSearch fieldset a.img {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+div.innerWrapper {
+	margin: 0 auto;
+	position: relative;
+}
+div.top, div.bottom {
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+sup {
+	font-size: 70%;
+	position: relative;
+	vertical-align: 0;
+	bottom: 0.8ex;
+}
+
+ol {
+	list-style: decimal;}
+
+.ulNav {
+	margin: 0;
+	list-style:  none;
+}
+
+.o0 {
+	// opacity: 0.0;
+	@include transparent;
+}
+.o1 {
+	//opacity: 1.0;
+	@include opaque;
+}

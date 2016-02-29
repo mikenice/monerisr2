@@ -1,0 +1,44 @@
+/* Some closing utility CSS styles that I use frequently to speed up development. */
+
+ul.pagLeft li.last, nav ul.pagLeft li.last {
+	margin-right: 0;
+	border-right-width: 0;
+}
+ul.pagRight li.last, nav ul.pagRight li.last {
+	margin-left: 0;
+	border-left-width: 0;
+}
+
+div.lastCol {
+	margin: 0;
+}
+
+.lead {
+	margin-top: 0;
+}
+
+/* Clearing Floats Class STARTS */
+.clearfloat {
+	display: inline-block;
+}
+.clearfloat:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+* html .clearfloat {
+	height: 1%;
+}
+.clearfloat {
+	display: block;
+}
+/* Clearing Floats Class ENDS  */
+
+div.clear {
+	height: 1px;
+	clear: both;
+	overflow: hidden;
+	display: block;
+}

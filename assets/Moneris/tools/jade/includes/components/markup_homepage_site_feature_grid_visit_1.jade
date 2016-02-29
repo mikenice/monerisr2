@@ -1,0 +1,8 @@
+div(class="visit-1")
+  div(class="homepage_site_feature_grid")
+    ul(class="list-unstyled")
+      each tile in htcTiles
+        li(class=tile.class + " col-xs-12 col-sm-4")
+          a(href=tile.href, title!=tile.title)
+            strong= tile.titleTop
+              span(class="text") #{tile.titleBottom}&nbsp;<span class="icon-chevron_right_bold"></span>

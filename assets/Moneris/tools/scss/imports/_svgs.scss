@@ -1,0 +1,1232 @@
+@mixin roundIconsClasses {
+
+  .halfOpacity {
+    opacity: 0.5;
+  }
+
+  .circle {
+    fill: $teal;
+  }
+
+  .icon {
+    fill: $iconBlue;
+  }
+
+}
+
+@mixin categoryIconsClassesBlack {
+
+  .noFill {
+    fill: none;
+  }
+
+  .icon {
+    fill: $black;
+  }
+
+}
+
+@mixin categoryIconsClassesBlue {
+
+  .noFill {
+    fill: none;
+  }
+
+  .icon {
+    fill: $iconBlue;
+  }
+
+}
+
+svg {
+
+  symbol#icon-account_padlock {
+
+    .padlock {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-account_padlock_hover_teal {
+
+    .padlock {
+      fill: $teal;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-account_silhouette {
+
+    .heads {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-calendar_white {
+
+    .stroke {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-arrow_circle_carousel_left {
+
+    .circle {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $black45;
+    }
+
+    .arrow {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-arrow_circle_carousel_right {
+
+    .circle {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $black45;
+    }
+
+    .arrow {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-arrow_circle_grey_right {
+
+    .circle {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $footerBorder;
+    }
+
+    .arrow {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-article_page_account_updater {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-article_page_api {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-article_page_batch_processing {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-article_page_hosted_pay_page {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-article_page_hosted_tokenization {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-article_page_online_fraud_tools {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-article_page_recurring_billing {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-article_page_tools {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-article_page_tools_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-article_page_virtual_terminal {
+    @include roundIconsClasses;
+  }
+
+  symbol#icon-carousel_indicator_active {
+
+    .circle {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-carousel_indicator {
+
+    .circle {
+      stroke: $white;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-carousel_slanted_edge_sky_blue {
+
+    .edge {
+      fill: $airMilesSkyBlue;
+    }
+
+  }
+
+  symbol#icon-category_page_business_management {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-category_page_business_management_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-category_page_ecommerce_solutions {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-category_page_ecommerce_solutions_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-category_page_payment_terminals {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-category_page_payment_terminals_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-checkmark_circle_teal {
+
+    .circle {
+      fill: $teal;
+    }
+
+  }
+
+  symbol#icon-chevron_down_grey {
+
+    .chevron {
+      fill: $hpChevronDownGrey;
+    }
+
+  }
+
+  */
+
+  symbol#icon-chevron_down_normal {
+
+    .chevron {
+      fill: $white;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-chevron_down_normal_dark_blue {
+
+    .chevron {
+      fill: $airMilesDarkBlue;
+    }
+
+  }
+
+  */
+
+  symbol#icon-chevron_down_normal_hover_teal {
+
+    .chevron {
+      fill: $teal;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-chevron_left_normal_dark_blue {
+
+    .chevron {
+      fill: $searchUrlsBlue;
+    }
+
+  }
+
+  symbol#icon-chevron_left_normal {
+
+    .chevron {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-chevron_right_bold {
+
+    .chevron {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-chevron_right_bold_hover_teal {
+
+    .chevron {
+      fill: $teal;
+    }
+
+  }
+
+  symbol#icon-chevron_right_normal_dark_blue {
+
+    .chevron {
+      fill: $searchUrlsBlue;
+    }
+
+  }
+
+  symbol#icon-chevron_right_normal {
+
+    .chevron {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-chevron_right_normal_hover_teal {
+
+    .chevron {
+      fill: $teal;
+    }
+
+  }
+
+  */
+
+  symbol#icon-chevron_right_skinny {
+
+    .chevron {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-chevron_up_normal {
+
+    .chevron {
+      fill: $white;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-chevron_up_normal_dark_blue {
+
+    .chevron {
+      fill: $airMilesDarkBlue;
+    }
+
+  }
+
+  */
+
+  symbol#icon-chevron_up_normal_hover_teal {
+
+    .chevron {
+      fill: $teal;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-circle_1_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_2_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_3_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_4_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_5_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_6_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_7_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_8_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-circle_9_dark_blue {
+
+    .stroke {
+      fill: none;
+      stroke: $airMilesDarkBlue;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  */
+
+  symbol#icon-close_x {
+
+    .closeX {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-close_x_hover_teal {
+
+    .closeX {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $teal;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-contact_support_customer_service {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-contact_support_customer_service_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-contact_support_merchant_direct {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-contact_support_merchant_direct_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-contact_support_sales_inquiries {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-contact_support_sales_inquiries_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-divot_down_green {
+
+    .divot {
+      fill: $green;
+    }
+
+  }
+
+  */
+
+  symbol#icon-divot_left {
+
+    .divot {
+      fill: $thirdLevelBlue;
+    }
+
+  }
+
+  symbol#icon-divot_left_outline {
+
+    .arrow {
+      fill: $headerHoverBlue;
+    }
+
+    .outline {
+      fill: $thirdLevelBlue;
+    }
+
+  }
+
+  symbol#icon-flag_canada {
+
+    .white {
+      fill: $white;
+    }
+
+    .canadaRed {
+      fill: $canadaRed;
+    }
+
+  }
+
+  symbol#icon-flag_usa {
+
+    .usaClipPath {
+      clip-path: url(#SVGID_2_);
+    }
+
+    .usaWhite {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+    .usaBlue {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $usaBlue;
+    }
+
+    .usaRed {
+      fill: $usaRed;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-form_checkmark {
+
+    .checkmark {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-form_error_arrow_up {
+
+    .arrow {
+      fill: $alertRed;
+    }
+
+  }
+
+  symbol#icon-installation_white {
+
+    .path {
+      fill: $white;
+    }
+
+  }
+
+  */
+
+  symbol#icon-logo_moneris_full {
+
+    .logo {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-logo_moneris_full_hover {
+
+    .logo {
+      fill: $teal;
+    }
+
+  }
+
+  symbol#icon-logo_moneris_symbol {
+
+    .moneris_symbol {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-logo_moneris_symbol_hover {
+
+    .moneris_symbol {
+      fill: $teal;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-mail {
+
+    .strokes {
+      fill: $airMilesDarkBlue;
+    }
+
+    .circle {
+      fill: $teal;
+    }
+
+    .checkmark {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-management_paying_solution_white {
+
+    .path {
+      fill: $white;
+    }
+
+  }
+
+  */
+
+  symbol#icon-menu_hamburger {
+
+    .hamburger {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-menu_hamburger_hover_teal {
+
+    .hamburger {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $teal;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-merchant_support_compliance_and_security {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-merchant_support_compliance_and_security_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-merchant_support_downloadable_guides {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-merchant_support_downloadable_guides_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-merchant_support_trouble_shooting {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-merchant_support_trouble_shooting_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-mobile_solutions_calendar {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-mobile_solutions_calendar_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-mobile_solutions_installation {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-mobile_solutions_installation_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-mobile_solutions_management_paying_solution {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-mobile_solutions_management_paying_solution_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-mobile_solutions_service_support {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-mobile_solutions_service_support_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-paragraph_account_updater {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-paragraph_api {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-paragraph_batch_processing {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-paragraph_hosted_pay_page {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-paragraph_hosted_tokenization {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-paragraph_online_fraud_tools {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-paragraph_recurring_billing {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-paragraph_virtual_terminal {
+
+    .circle {
+      opacity: 0.5;
+      fill: none;
+      stroke: $paragraphCircleLightBlue;
+      stroke-width: 1.5;
+      stroke-miterlimit: 10;
+    }
+
+    .icon {
+      fill: none;
+      stroke: $paragraphIconDarkBlue;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+
+  }
+
+  symbol#icon-payment_processing_credit_debit_card {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-payment_processing_credit_debit_card_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-payment_processing_fees {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-payment_processing_fees_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-payment_processing_moneris_terminal {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-payment_processing_moneris_terminal_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-payment_processing_news {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-payment_processing_news_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-payment_processing_payment_terminal {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-payment_processing_payment_terminal_black {
+    @include categoryIconsClassesBlack;
+  }
+  
+  symbol#icon-phone_circle_teal {
+
+    .circle {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $teal;
+    }
+
+    .phone {
+      fill: $white;
+    }
+
+  }
+
+  */
+
+  symbol#icon-phone_white {
+
+    .phone {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-phone_hover_teal {
+
+    .phone {
+      fill: $teal;
+    }
+
+  }
+
+  /*
+  
+  symbol#icon-processing_credit_debit_card {
+
+    .cards {
+      fill: $iconBlue;
+    }
+
+  }
+
+  symbol#icon-processing_fees {
+
+    .phone {
+      fill: $iconBlue;
+    }
+
+  }
+
+  symbol#icon-processing_moneris_terminal {
+
+    .terminal {
+      fill: $iconBlue;
+    }
+
+  }
+
+  symbol#icon-processing_news {
+
+    .newspaper {
+      fill: $iconBlue;
+    }
+
+  }
+
+  symbol#icon-processing_news_black {
+
+    .newspaper {
+      fill: $black;
+    }
+
+  }
+
+  symbol#icon-processing_payment_terminal {
+
+    .terminal {
+      fill: $iconBlue;
+    }
+
+  }
+
+  symbol#icon-products_services_business_management {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-products_services_business_management_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-products_services_ecommerce_solutions {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-products_services_ecommerce_solutions_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-products_services_payment_terminals {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-products_services_payment_terminals_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-products_services_quick_links {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-products_services_quick_links_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-products_services_tools {
+    @include categoryIconsClassesBlue;
+  }
+
+  symbol#icon-products_services_tools_black {
+    @include categoryIconsClassesBlack;
+  }
+
+  symbol#icon-search_alert {
+
+    .alert {
+      fill: $textGrey;
+    }
+
+  }
+
+  */
+
+  symbol#icon-search_magnifying_glass {
+
+    .magnifyingGlass {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-search_magnifying_glass_hover_teal {
+
+    .magnifyingGlass {
+      fill: $teal;
+    }
+
+  }
+
+  /*
+
+  symbol#icon-service_support_white {
+
+    .path {
+      fill: $white;
+    }
+
+  }
+
+  */
+
+  symbol#icon-social_facebook {
+
+    .facebookTvTube {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $facebookBlue;
+    }
+    
+    .facebookLogo {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-social_linkedin {
+
+    .linkedinTvTube {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $linkedinBlue;
+    }
+    
+    .linkedinLogo {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-social_twitter {
+
+    .twitterTvTube {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $twitterBlue;
+    }
+    
+    .twitterLogo {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-social_facebook_logo {
+
+    .box {
+      fill: transparent;
+    }
+
+    .logo {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-social_linkedin_logo {
+
+    .box {
+      fill: transparent;
+    }
+
+    .logo {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-social_twitter_logo {
+
+    .box {
+      fill: transparent;
+    }
+
+    .logo {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-take_to_new_website_arrow {
+
+    .arrow {
+      fill: $white;
+    }
+    
+    .square {
+      fill: $white;
+    }
+
+  }
+
+  symbol#icon-take_to_new_website_arrow_hover_teal {
+
+    .arrow {
+      fill: $teal;
+    }
+    
+    .square {
+      fill: $teal;
+    }
+
+  }
+
+}

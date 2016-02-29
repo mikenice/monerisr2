@@ -1,0 +1,264 @@
+header div.innerCont nav.globalNav.topLevel.li-0 div.tlWrap ul.topLevel > li a,
+header div.innerCont nav.globalNav.topLevel.li-1 div.tlWrap ul.topLevel > li a,
+header div.innerCont nav.globalNav.topLevel.li-2 div.tlWrap ul.topLevel > li a,
+header div.innerCont nav.globalNav.topLevel.li-3 div.tlWrap ul.topLevel > li a,
+header div.innerCont nav.globalNav.topLevel.li-4 div.tlWrap ul.topLevel > li a {
+
+  span.text {
+
+    svg.chevronRightBold {
+      display: none;
+    }
+
+  }
+
+  svg.divot, svg.divotOutline {
+    display: none;
+  }
+
+}
+
+header div.innerCont nav.globalNav.topLevel.li-0 div.tlWrap ul.topLevel > li.li-0,
+header div.innerCont nav.globalNav.topLevel.li-1 div.tlWrap ul.topLevel > li.li-1,
+header div.innerCont nav.globalNav.topLevel.li-2 div.tlWrap ul.topLevel > li.li-2,
+header div.innerCont nav.globalNav.topLevel.li-3 div.tlWrap ul.topLevel > li.li-3,
+header div.innerCont nav.globalNav.topLevel.li-4 div.tlWrap ul.topLevel > li.li-4 {
+ 
+  a {
+    @include avBlack;
+
+    span.text {
+      text-decoration: underline;
+
+      span.chevronRight {
+        
+        span.icon-chevron_right_normal {
+          display: none;
+        }
+        
+        span.icon-chevron_right_bold {
+          display: inline;
+        }
+        
+      }
+
+    }
+
+    @media #{scrMinWidth($screen-md-min)} {
+      @include avMed;
+      color: $teal;
+      // background-color: $black;
+    }
+
+    span.text {
+
+      @media #{scrMinWidth($screen-md-min)} {
+        text-decoration: none;
+      }
+
+      svg.chevronDown {
+
+        @media #{scrMinWidth($screen-md-min)} {
+          display: none;
+        }
+
+      }
+
+      svg.chevronUp {
+
+        @media #{scrMinWidth($screen-md-min)} {
+          display: none;
+        }
+
+      }
+
+      svg.chevronUpHoverTeal {
+
+        @media #{scrMinWidth($screen-md-min)} {
+          display: inline-block;
+        }
+
+        html.tablet.android & {
+
+          @media #{scrMinWidth($screen-md-min)} {
+            display: inline;
+          }
+
+        }
+
+      }
+
+      svg.chevronRight {
+        display: none;
+      }
+
+      svg.chevronRightBold {
+        display: inline-block;
+
+        @media #{scrMinWidth($screen-md-min)} {
+          display: none;  
+        }
+
+      }
+
+      svg.chevronRightBoldHoverTeal {
+        display: none;
+      }
+
+    }
+
+    svg.divot {
+      display: block;
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        display: none;
+      }
+
+    }
+
+    svg.divotOutline {
+
+      @media #{scrMinWidth($screen-sm-min)} {
+        display: block;
+      }
+
+      @media #{scrMinWidth($screen-md-min)} {
+        display: none;
+      }
+
+    }
+
+    &:hover, &:focus {
+
+      span.text {
+
+        svg.chevronRightBold {
+          display: none;
+        }
+
+        svg.chevronRightBoldHoverTeal {
+          display: inline-block;
+
+          @media #{scrMinWidth($screen-md-min)} {
+            display: none;  
+          }
+
+        }
+
+      }
+
+    }
+
+    &:active {
+      color: $white;
+
+      @media #{scrMinWidth($screen-md-min)} {
+        color: $teal;
+      }
+
+      span.text {
+
+        svg.chevronRightBold {
+          display: inline-block;
+
+          @media #{scrMinWidth($screen-md-min)} {
+            display: none;
+          }
+
+        }
+
+        svg.chevronRightBoldHoverTeal {
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  ul.secondLevel {
+    display: block;
+
+    > li {
+
+      a {
+        @include avMed;
+        color: $white;
+
+        span.text {
+          text-decoration: none;
+
+          svg.chevronRight {
+            display: inline-block;
+          }
+
+          svg.chevronRightHoverTeal {
+            display: none;
+          }
+
+          svg.chevronRightBold {
+            display: none;
+          }
+
+        }
+
+        &:hover, &:focus {
+          color: $teal;
+
+          @media #{scrMinWidth($screen-md-min)} {
+            color: $white;  
+          }
+
+          span.text {
+
+            svg.chevronRight {
+              display: none;
+
+              @media #{scrMinWidth($screen-md-min)} {
+                display: inline-block;
+              }
+
+            }
+
+            svg.chevronRightHoverTeal {
+              display: inline-block;
+
+              @media #{scrMinWidth($screen-md-min)} {
+                display: none;  
+              }
+
+            }
+
+          }
+
+        }
+
+        &:active {
+          color: $white;
+
+          span.text {
+
+            svg.chevronRight {
+              display: inline-block;
+            }
+
+            svg.chevronRightHoverTeal {
+              display: none;
+            }
+
+          }
+
+        }
+
+        svg.divot, svg.divotOutline {
+          display: none;
+        }
+
+      }
+
+    }
+
+  }
+
+}
